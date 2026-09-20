@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#ffffff"/>
+  <defs>
+    <radialGradient id="dosa" cx="42%" cy="40%" r="70%">
+      <stop offset="0" stop-color="#7a7a7a"/><stop offset="0.7" stop-color="#2e2e2e"/><stop offset="1" stop-color="#111"/>
+    </radialGradient>
+  </defs>
+  <!-- plate rim -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#1e1e1e" stroke-width="7"/>
+  <circle cx="100" cy="100" r="66" fill="none" stroke="#3a3a3a" stroke-width="2"/>
+  <!-- folded dosa -->
+  <path d="M46 128 Q100 34 154 128 Q100 100 46 128 Z" fill="url(#dosa)"/>
+  <!-- small chutney/sambar dots -->
+  <circle cx="70" cy="150" r="10" fill="#242424"/>
+  <circle cx="130" cy="150" r="10" fill="#161616"/>
+</svg>

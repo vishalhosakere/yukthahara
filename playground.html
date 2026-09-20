@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!-- Yukthahara — THEME PLAYGROUND. Live-switch theme / palette / fonts to finalize a look.
+     Everything is CSS-variable driven; the floating panel writes the variables + a copyable config.
+     Kannada is DRAFT (native review needed). This page is a tool — not the production home. -->
+<html lang="en" data-lang="en" data-theme="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yukthahara · Theme playground</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Serif:ital@0;1&family=DM+Serif+Display:ital@0;1&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Anton&family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=Syne:wght@400;600;700;800&family=Mulish:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Figtree:wght@400;500;600;700&family=Noto+Serif+Kannada:wght@400;500;600;700&family=Anek+Kannada:wght@400;500;700;800&family=Baloo+Tamma+2:wght@400;500;700&family=Noto+Sans+Kannada:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box} *{margin:0}
+  html{scroll-behavior:smooth}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none} button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+  :root{
+    /* themeable variables (written by the panel) */
+    --bg:#F3ECDA; --surface:#FAF6EC; --ink:#5B4636; --head:#253D2A; --accent:#B08D57; --accent-ink:#F3ECDA;
+    --line:#C9BEA9; --muted:#6E7150;
+    --display:"Fraunces",serif; --body:"Mulish",sans-serif; --kn-display:"Noto Serif Kannada",serif; --kn-body:"Anek Kannada",sans-serif;
+    /* structural (set per theme) */
+    --radius:8px; --hair:1px; --shadow:none; --btn-shadow:none; --upper:none; --h1w:500; --tracking:-.01em; --h1lh:1.02;
+    --pad:clamp(22px,6vw,90px); --wrap:1180px;
+  }
+  html[data-lang="en"] .kn{display:none} html[data-lang="kn"] .en{display:none}
+  .kn{font-family:var(--kn-body)} h1 .kn,h2 .kn,h3 .kn,.brand .kn{font-family:var(--kn-display)}
+
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;transition:background .3s,color .3s}
+  .wrap{max-width:var(--wrap);margin:0 auto}
+  section{padding:clamp(64px,11vh,140px) var(--pad);position:relative}
+  .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  h1,h2,h3{font-family:var(--display);color:var(--head);text-transform:var(--upper);letter-spacing:var(--tracking);font-weight:var(--h1w);line-height:var(--h1lh)}
+  h1{font-size:clamp(42px,7.5vw,96px)} h2{font-size:clamp(30px,4.6vw,58px)} h3{font-size:clamp(19px,2.3vw,26px)}
+  .em{font-style:italic;color:var(--accent)}
+  p{max-width:64ch} .lead{font-size:clamp(17px,1.6vw,20px);line-height:1.7}
+  .muted{color:var(--muted)} .rule{width:52px;height:2px;background:var(--accent);margin-bottom:24px}
+
+  .btn{display:inline-block;padding:15px 30px;border-radius:var(--radius);font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+    background:var(--accent);color:var(--accent-ink);box-shadow:var(--btn-shadow);transition:.2s;border:var(--hair) solid transparent}
+  .btn.ghost{background:transparent;color:var(--head);border:var(--hair) solid var(--head)}
+  .btn:hover{transform:translateY(-2px)}
+  .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+
+  .nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;
+    padding:16px var(--pad);transition:.3s;color:var(--accent-ink);mix-blend-mode:difference}
+  .nav .brand{font-family:var(--display);font-size:23px;font-weight:var(--h1w);color:#fff;text-transform:var(--upper)}
+  .navlinks{display:flex;gap:26px;align-items:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+
+  /* hero */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:url('assets/media/millet-ears-golden-field.jpg') center/cover;
+    transform:scale(1.05);animation:kb 20s ease-in-out infinite alternate}
+  @keyframes kb{to{transform:scale(1.15) translate(-1%,-1%)}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 2%,transparent 55%)}
+  .hero-copy{position:relative;z-index:2;max-width:820px;padding:0 var(--pad) clamp(56px,11vh,110px)}
+  .hero h1{color:var(--head)} .hero .eyebrow{color:var(--accent)}
+  .hero .tagline{font-family:var(--display);font-style:italic;font-size:clamp(19px,2.3vw,28px);color:var(--muted);margin-top:14px}
+  html[data-theme="kinetic"] .hero-bg,html[data-theme="brutalist"] .hero-bg{opacity:.26}
+
+  /* cards */
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-top:48px}
+  .card{background:var(--surface);border:var(--hair) solid var(--line);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);transition:.25s}
+  .card:hover{transform:translateY(-4px)}
+  .seed{width:44px;height:44px;border-radius:50%;margin-bottom:18px;background:radial-gradient(circle at 34% 30%,var(--muted),var(--accent) 75%)}
+  html[data-theme="brutalist"] .seed{border-radius:0}
+  .card .name{font-family:var(--display);font-size:21px;color:var(--head);text-transform:var(--upper)}
+  .card .lat{font-style:italic;font-size:13px;color:var(--muted);margin:6px 0 10px}
+
+  /* table */
+  .tablewrap{margin-top:36px;border:var(--hair) solid var(--line);border-radius:var(--radius);overflow:hidden}
+  table{width:100%;border-collapse:collapse;background:var(--surface)}
+  th,td{padding:14px 16px;text-align:left;border-bottom:var(--hair) solid var(--line);font-size:15px}
+  thead th{font-family:var(--display);color:var(--head);text-transform:var(--upper)}
+  .band{background:var(--head);color:var(--bg)} .band h2{color:var(--bg)} .band .lead{color:var(--bg);opacity:.85} .band .rule{background:var(--accent)}
+  footer{background:var(--head);color:var(--bg);padding:44px var(--pad);opacity:.95}
+
+  /* theme structural presets */
+  html[data-theme="editorial"]{--radius:8px;--hair:1px;--upper:none;--h1w:500;--tracking:-.01em;--h1lh:1.02;--shadow:none;--btn-shadow:none}
+  html[data-theme="kinetic"]{--radius:2px;--hair:1px;--upper:uppercase;--h1w:400;--tracking:-.015em;--h1lh:.84;--shadow:none;--btn-shadow:none}
+  html[data-theme="kinetic"] h1{font-size:clamp(56px,12vw,168px)}
+  html[data-theme="kinetic"] .card{backdrop-filter:blur(4px)}
+  html[data-theme="brutalist"]{--radius:0;--hair:3px;--upper:uppercase;--h1w:900;--tracking:.01em;--h1lh:.92;--shadow:6px 6px 0 var(--head);--btn-shadow:5px 5px 0 var(--head)}
+  html[data-theme="brutalist"] .card,html[data-theme="brutalist"] .tablewrap{border-color:var(--head)}
+  html[data-theme="brutalist"] .btn{border-color:var(--head)}
+  html[data-theme="brutalist"] section+section{border-top:3px solid var(--head)}
+  html[data-theme="brutalist"] .rule{height:4px}
+
+  /* ---------- control panel ---------- */
+  #panel{position:fixed;right:18px;bottom:18px;z-index:100;width:320px;max-height:84vh;overflow:auto;
+    background:#141414;color:#eee;border-radius:14px;padding:18px;font-family:"DM Sans",system-ui,sans-serif;font-size:13px;
+    box-shadow:0 24px 60px -20px rgba(0,0,0,.6);transition:transform .3s}
+  #panel.collapsed{transform:translateY(calc(100% - 52px))}
+  #panel h4{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#9a9a9a;margin:16px 0 8px;font-weight:600}
+  #panel .head{display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+  #panel .head b{font-size:14px;letter-spacing:.04em}
+  .seg{display:flex;gap:6px;flex-wrap:wrap}
+  .seg button{flex:1;min-width:74px;padding:9px 8px;border-radius:8px;background:#242424;color:#ddd;font-size:12px;transition:.2s}
+  .seg button.on{background:#eee;color:#141414;font-weight:600}
+  .swatches{display:flex;gap:8px;flex-wrap:wrap}
+  .sw{width:30px;height:30px;border-radius:50%;border:2px solid transparent;cursor:pointer;position:relative;overflow:hidden}
+  .sw.on{border-color:#fff}
+  .sw i{position:absolute;inset:0}.sw i:nth-child(2){clip-path:polygon(100% 0,100% 100%,0 100%)}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:8px 0}
+  .row label{color:#bbb} .row select,.row input[type=color]{background:#242424;color:#eee;border:1px solid #333;border-radius:7px;padding:7px;font:inherit;max-width:170px}
+  .row input[type=color]{padding:2px;width:40px;height:30px}
+  #config{margin-top:12px;background:#0c0c0c;border-radius:8px;padding:10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:#b9c;white-space:pre-wrap;word-break:break-word}
+  #copyBtn{margin-top:8px;width:100%;padding:10px;border-radius:8px;background:#3a6;color:#062;font-weight:700}
+  #copyBtn.done{background:#6d6}
+  @media(max-width:760px){#panel{width:auto;left:12px;right:12px;bottom:12px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="index.html">Yukthahara</a>
+  <div class="navlinks">
+    <a href="#siridhanya"><span class="en">Siridhanya</span><span class="kn">ಸಿರಿಧಾನ್ಯ</span></a>
+    <a href="#nutrition"><span class="en">Nutrition</span><span class="kn">ಪೋಷಣೆ</span></a>
+    <a href="#visit"><span class="en">Visit</span><span class="kn">ಭೇಟಿ</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="en">Millet kitchen · Mysore</span><span class="kn">ಸಿರಿಧಾನ್ಯ ಅಡುಗೆಮನೆ · ಮೈಸೂರು</span></div>
+    <h1 style="margin-top:16px"><span class="en">Eat like the land remembers.</span><span class="kn">ಸಿರಿಧಾನ್ಯವೇ ನಮ್ಮ ಆಹಾರ.</span></h1>
+    <p class="tagline"><span class="en">Eat right, eat millets.</span><span class="kn">ಸರಿಯಾಗಿ ತಿನ್ನಿ, ಸಿರಿಧಾನ್ಯ ತಿನ್ನಿ.</span></p>
+    <div class="cta"><a class="btn" href="#nutrition"><span class="en">View the menu</span><span class="kn">ಮೆನು ನೋಡಿ</span></a>
+    <a class="btn ghost" href="#visit"><span class="en">Visit us</span><span class="kn">ಭೇಟಿ ನೀಡಿ</span></a></div>
+  </div>
+</header>
+
+<section class="wrap" id="siridhanya">
+  <div class="rule"></div>
+  <div class="eyebrow"><span class="en">The five siridhanya</span><span class="kn">ಪಂಚ ಸಿರಿಧಾನ್ಯ</span></div>
+  <h2 style="margin-top:12px"><span class="en">Five <span class="em">positive</span> millets.</span><span class="kn">ಐದು <span class="em">ಧನಾತ್ಮಕ</span> ಸಿರಿಧಾನ್ಯ.</span></h2>
+  <div class="grid">
+    <div class="card"><div class="seed"></div><div class="name"><span class="en">Foxtail</span><span class="kn">ನವಣೆ</span></div><div class="lat">Setaria italica</div><div><span class="en">High protein; low GI.</span><span class="kn">ಹೆಚ್ಚು ಪ್ರೋಟೀನ್; ಕಡಿಮೆ ಜಿಐ.</span></div></div>
+    <div class="card"><div class="seed"></div><div class="name"><span class="en">Browntop</span><span class="kn">ಕೊರಲೆ</span></div><div class="lat">Brachiaria ramosa</div><div><span class="en">Fibre-rich grain.</span><span class="kn">ನಾರು-ಸಮೃದ್ಧ ಧಾನ್ಯ.</span></div></div>
+    <div class="card"><div class="seed"></div><div class="name"><span class="en">Kodo</span><span class="kn">ಹಾರಕ</span></div><div class="lat">Paspalum scrobiculatum</div><div><span class="en">High magnesium.</span><span class="kn">ಹೆಚ್ಚು ಮೆಗ್ನೀಸಿಯಂ.</span></div></div>
+    <div class="card"><div class="seed"></div><div class="name"><span class="en">Little</span><span class="kn">ಸಾಮೆ</span></div><div class="lat">Panicum sumatrense</div><div><span class="en">Good fibre.</span><span class="kn">ಉತ್ತಮ ನಾರು.</span></div></div>
+    <div class="card"><div class="seed"></div><div class="name"><span class="en">Barnyard</span><span class="kn">ಊದಲು</span></div><div class="lat">Echinochloa frumentacea</div><div><span class="en">Lowest GI of the five.</span><span class="kn">ಐದರಲ್ಲಿ ಕಡಿಮೆ ಜಿಐ.</span></div></div>
+  </div>
+</section>
+
+<section class="wrap" id="nutrition">
+  <div class="rule"></div>
+  <div class="eyebrow"><span class="en">The holistic choice</span><span class="kn">ಸಮಗ್ರ ಆಯ್ಕೆ</span></div>
+  <h2 style="margin-top:12px"><span class="en">More of what matters.</span><span class="kn">ಬೇಕಾದದ್ದು ಹೆಚ್ಚು.</span></h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th><span class="en">Per 100g</span><span class="kn">ಪ್ರತಿ ೧೦೦ಗ್ರಾಂ</span></th><th>Millet</th><th><span class="en">White rice</span><span class="kn">ಬಿಳಿ ಅಕ್ಕಿ</span></th><th><span class="en">Refined wheat</span><span class="kn">ಗೋಧಿ</span></th></tr></thead>
+    <tbody>
+      <tr><th><span class="en">Fibre</span><span class="kn">ನಾರು</span></th><td>8.0 g</td><td>1.3 g</td><td>2.7 g</td></tr>
+      <tr><th><span class="en">Protein</span><span class="kn">ಪ್ರೋಟೀನ್</span></th><td>12.3 g</td><td>7.1 g</td><td>10.3 g</td></tr>
+      <tr><th><span class="en">Glycemic index</span><span class="kn">ಜಿಐ</span></th><td>~53</td><td>~72</td><td>~74</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="band"><div class="wrap">
+  <div class="rule"></div>
+  <div class="eyebrow"><span class="en">Kind to the earth</span><span class="kn">ಭೂಮಿಗೆ ಒಳಿತು</span></div>
+  <h2 style="margin-top:12px;max-width:20ch"><span class="en">Ancient grains for a warming world.</span><span class="kn">ಬಿಸಿಯಾಗುತ್ತಿರುವ ಜಗತ್ತಿಗೆ ಪುರಾತನ ಧಾನ್ಯಗಳು.</span></h2>
+  <p class="lead" style="margin-top:16px;max-width:52ch"><span class="en">Millets are C4 grasses — more grain from less water, grown on the rain alone.</span><span class="kn">ಸಿರಿಧಾನ್ಯ ಸಿ4 ಹುಲ್ಲುಗಳು — ಕಡಿಮೆ ನೀರಿನಲ್ಲಿ ಹೆಚ್ಚು ಧಾನ್ಯ, ಮಳೆಯಿಂದಲೇ ಬೆಳೆಯುತ್ತವೆ.</span></p>
+</div></section>
+
+<section class="wrap" id="visit">
+  <div class="rule"></div>
+  <div class="eyebrow"><span class="en">Visit us</span><span class="kn">ಭೇಟಿ ಮಾಡಿ</span></div>
+  <h2 style="margin-top:12px">Yukthahara</h2>
+  <p class="lead" style="margin-top:14px">Kuvempunagar, Mysore 570023 · <span class="en">Tue–Sun 8am–10pm</span><span class="kn">ಮಂಗಳ–ಭಾನು ಬೆ೮–ರಾ೧೦</span></p>
+  <div class="cta"><a class="btn" href="#"><span class="en">Call to reserve</span><span class="kn">ಕರೆ ಮಾಡಿ</span></a></div>
+</section>
+
+<footer><div class="wrap"><b class="brand" style="font-family:var(--display);font-size:24px">Yukthahara</b> — <span class="en">a millet kitchen in Mysore.</span><span class="kn">ಮೈಸೂರಿನ ಸಿರಿಧಾನ್ಯ ಅಡುಗೆಮನೆ.</span></div></footer>
+
+<!-- CONTROL PANEL -->
+<aside id="panel">
+  <div class="head" id="phead"><b>⚙ Theme lab</b><span id="chev">▾</span></div>
+  <div id="pbody">
+    <h4>Theme</h4>
+    <div class="seg" id="themeSeg"></div>
+    <h4>Palette</h4>
+    <div class="swatches" id="palSw"></div>
+    <div class="row"><label>Accent</label><input type="color" id="accent"></div>
+    <h4>Language preview</h4>
+    <div class="seg" id="langSeg"></div>
+    <h4>English fonts</h4>
+    <div class="row"><label>Header</label><select id="enDisp"></select></div>
+    <div class="row"><label>Body</label><select id="enBody"></select></div>
+    <h4>Kannada fonts</h4>
+    <div class="row"><label>Header</label><select id="knDisp"></select></div>
+    <div class="row"><label>Body</label><select id="knBody"></select></div>
+    <div id="config"></div>
+    <button id="copyBtn">Copy config</button>
+  </div>
+</aside>
+
+<script>
+(function(){
+  const root=document.documentElement, S=k=>document.getElementById(k);
+  const THEMES={
+    editorial:{palette:"ivoryForest",accent:"#B08D57",enDisp:'"Fraunces",serif',enBody:'"Mulish",sans-serif',knDisp:'"Noto Serif Kannada",serif',knBody:'"Anek Kannada",sans-serif'},
+    kinetic:{palette:"inkLime",accent:"#c9f24a",enDisp:'"Anton",sans-serif',enBody:'"Space Grotesk",sans-serif',knDisp:'"Anek Kannada",sans-serif',knBody:'"Anek Kannada",sans-serif'},
+    brutalist:{palette:"paperRed",accent:"#ff3b1d",enDisp:'"Archivo Black",sans-serif',enBody:'"IBM Plex Mono",monospace',knDisp:'"Anek Kannada",sans-serif',knBody:'"Noto Sans Kannada",sans-serif'}
+  };
+  const PALETTES={
+    ivoryForest:["#F3ECDA","#FAF6EC","#5B4636","#253D2A","#B08D57","#F3ECDA","#C9BEA9","#6E7150"],
+    darkForest:["#16281A","#1e3323","#cdd6c6","#F3ECDA","#B08D57","#16281A","#3a5140","#9bb09f"],
+    inkLime:["#0e0e0c","#17170f","#d9d5c8","#ece7dd","#c9f24a","#0e0e0c","#2a2a24","#8a877c"],
+    paperRed:["#f4f4ef","#ffffff","#141414","#141414","#ff3b1d","#ffffff","#141414","#555555"],
+    terracotta:["#f6ede3","#fff9f2","#4a2f24","#7a2e12","#c0492e","#ffffff","#e0c9b8","#9a6b52"],
+    sageCream:["#eef0e6","#f8faf2","#3a4038","#3f5641","#8a9a4d","#1e241a","#cdd4c2","#6f7a68"]
+  };
+  const PVARS=["--bg","--surface","--ink","--head","--accent","--accent-ink","--line","--muted"];
+  const EN_DISP=["Fraunces","Instrument Serif","DM Serif Display","Bricolage Grotesque","Anton","Archivo Black","Space Grotesk","Syne"];
+  const EN_BODY=["Mulish","Hanken Grotesk","DM Sans","Work Sans","Space Grotesk","IBM Plex Mono","Figtree"];
+  const KN_DISP=["Noto Serif Kannada","Anek Kannada","Baloo Tamma 2"];
+  const KN_BODY=["Anek Kannada","Noto Sans Kannada","Baloo Tamma 2"];
+  const st={theme:"editorial",palette:"ivoryForest",accent:"#B08D57",lang:"en",enDisp:'"Fraunces",serif',enBody:'"Mulish",sans-serif',knDisp:'"Noto Serif Kannada",serif',knBody:'"Anek Kannada",sans-serif'};
+
+  const q=f=>'"'+f+'"'+(/(Mono)/.test(f)?",monospace":(/(Fraunces|Serif|Instrument)/.test(f)?",serif":",sans-serif"));
+  function setPalette(name){const p=PALETTES[name];if(!p)return;PVARS.forEach((v,i)=>root.style.setProperty(v,p[i]));st.palette=name;
+    document.querySelectorAll("#palSw .sw").forEach(s=>s.classList.toggle("on",s.dataset.p===name));}
+  function setAccent(hex){root.style.setProperty("--accent",hex);
+    // contrast ink on accent
+    const c=hex.replace("#",""),r=parseInt(c.substr(0,2),16),g=parseInt(c.substr(2,2),16),b=parseInt(c.substr(4,2),16);
+    root.style.setProperty("--accent-ink",(0.299*r+0.587*g+0.114*b)>150?"#141414":"#ffffff");st.accent=hex;S("accent").value=hex;}
+  function setFont(role,val){const map={enDisp:"--display",enBody:"--body",knDisp:"--kn-display",knBody:"--kn-body"};
+    root.style.setProperty(map[role],val);st[role]=val;}
+  function setTheme(name){const t=THEMES[name];root.setAttribute("data-theme",name);st.theme=name;
+    setPalette(t.palette);setAccent(t.accent);
+    setFont("enDisp",t.enDisp);setFont("enBody",t.enBody);setFont("knDisp",t.knDisp);setFont("knBody",t.knBody);
+    S("enDisp").value=t.enDisp;S("enBody").value=t.enBody;S("knDisp").value=t.knDisp;S("knBody").value=t.knBody;
+    document.querySelectorAll("#themeSeg button").forEach(b=>b.classList.toggle("on",b.dataset.t===name));readout();}
+  function setLang(l){root.setAttribute("data-lang",l);st.lang=l;document.querySelectorAll("#langSeg button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));}
+  function readout(){S("config").textContent=
+    "theme: "+st.theme+"\npalette: "+st.palette+"\naccent: "+st.accent+
+    "\nEN header: "+st.enDisp.split('"')[1]+"\nEN body: "+st.enBody.split('"')[1]+
+    "\nKN header: "+st.knDisp.split('"')[1]+"\nKN body: "+st.knBody.split('"')[1];
+    localStorage.setItem("yh-lab",JSON.stringify(st));}
+
+  // build controls
+  Object.keys(THEMES).forEach(t=>{const b=document.createElement("button");b.textContent=t;b.dataset.t=t;
+    b.onclick=()=>{setTheme(t);readout();};S("themeSeg").appendChild(b);});
+  Object.keys(PALETTES).forEach(name=>{const p=PALETTES[name];const s=document.createElement("div");s.className="sw";s.dataset.p=name;s.title=name;
+    s.innerHTML='<i style="background:'+p[0]+'"></i><i style="background:'+p[4]+'"></i>';
+    s.onclick=()=>{setPalette(name);readout();};S("palSw").appendChild(s);});
+  [["en","EN"],["kn","ಕನ್ನಡ"]].forEach(([l,t])=>{const b=document.createElement("button");b.textContent=t;b.dataset.l=l;
+    b.onclick=()=>{setLang(l);readout();};S("langSeg").appendChild(b);});
+  const fill=(id,list,role)=>{const sel=S(id);list.forEach(f=>{const o=document.createElement("option");o.value=q(f);o.textContent=f;sel.appendChild(o);});
+    sel.onchange=()=>{setFont(role,sel.value);readout();};};
+  fill("enDisp",EN_DISP,"enDisp");fill("enBody",EN_BODY,"enBody");fill("knDisp",KN_DISP,"knDisp");fill("knBody",KN_BODY,"knBody");
+
+  // panel collapse
+  S("phead").onclick=()=>{S("panel").classList.toggle("collapsed");S("chev").textContent=S("panel").classList.contains("collapsed")?"▴":"▾";};
+  S("accent").oninput=e=>{setAccent(e.target.value);readout();};
+  S("copyBtn").onclick=()=>{navigator.clipboard.writeText(S("config").textContent).then(()=>{S("copyBtn").textContent="Copied ✓";S("copyBtn").classList.add("done");setTimeout(()=>{S("copyBtn").textContent="Copy config";S("copyBtn").classList.remove("done");},1400);});};
+
+  // restore or default
+  const saved=JSON.parse(localStorage.getItem("yh-lab")||"null");
+  if(saved){Object.assign(st,saved);root.setAttribute("data-theme",st.theme);setPalette(st.palette);setAccent(st.accent);
+    setFont("enDisp",st.enDisp);setFont("enBody",st.enBody);setFont("knDisp",st.knDisp);setFont("knBody",st.knBody);
+    S("enDisp").value=st.enDisp;S("enBody").value=st.enBody;S("knDisp").value=st.knDisp;S("knBody").value=st.knBody;
+    document.querySelectorAll("#themeSeg button").forEach(b=>b.classList.toggle("on",b.dataset.t===st.theme));
+    setLang(st.lang);readout();}
+  else{setTheme("editorial");setLang("en");}
+})();
+</script>
+</body>
+</html>

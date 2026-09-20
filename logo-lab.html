@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Logo flourish placement tool. Drag the flourish, use the sliders to size/rotate.
+     Values (relative to the wordmark, in em so they scale) are shown live + stored on window.__flourish. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yuktaahara · logo lab</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ivory:#F3ECDA;--forest:#253D2A;--accent:#A6552E}
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--ivory);color:var(--forest);font-family:"Space Mono",monospace;padding:30px;display:flex;gap:30px;flex-wrap:wrap}
+  .stage{position:relative;flex:1 1 640px;min-height:340px;background:#faf6ec;border:2px dashed #c9bea9;border-radius:8px;
+    display:grid;place-items:center;overflow:hidden}
+  .lockup{position:relative}
+  .word{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:72px;color:var(--forest);text-transform:lowercase;line-height:.9;letter-spacing:.004em}
+  .fl{position:absolute;left:150px;top:78px;width:150px;cursor:grab;touch-action:none;transform-origin:center}
+  .fl.drag{cursor:grabbing}
+  .fl svg{display:block;width:100%;height:auto}
+  .fl::after{content:"";position:absolute;inset:-6px;border:1px dashed rgba(166,85,46,.5);border-radius:4px;pointer-events:none;opacity:0;transition:.15s}
+  .fl:hover::after{opacity:1}
+  .panel{flex:0 0 300px;font-size:13px}
+  .panel h2{font-family:"Bricolage Grotesque";font-size:20px;margin-bottom:6px}
+  .panel p{color:#6e7150;margin-bottom:18px;line-height:1.5}
+  .ctl{margin:14px 0}
+  .ctl label{display:flex;justify-content:space-between;margin-bottom:6px;font-weight:700}
+  .ctl input[type=range]{width:100%}
+  .seg{display:flex;gap:6px;margin:14px 0}
+  .seg button{flex:1;padding:8px;border:2px solid var(--forest);background:#fff;font:inherit;font-size:12px;cursor:pointer}
+  pre{background:var(--forest);color:var(--ivory);padding:14px;border-radius:6px;font-size:11px;line-height:1.6;white-space:pre-wrap;word-break:break-word;margin-top:12px}
+  #copy{margin-top:8px;width:100%;padding:10px;border:0;background:var(--accent);color:#fff;font:inherit;font-weight:700;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="lockup" id="lockup">
+    <div class="word" id="word">yuktaahara</div>
+    <div class="fl" id="fl">
+      <svg viewBox="263 365 147 37" fill="#A6552E" aria-hidden="true"><g transform="translate(0,518) scale(0.1,-0.1)"><path d="M4030 1503 c-28 -10 -62 -48 -85 -94 -22 -42 -94 -108 -152 -138 -33 -17 -34 -14 -13 22 20 32 28 107 12 107 -5 0 -19 -12 -33 -26 -19 -20 -24 -37 -25 -77 l0 -52 -55 -14 c-81 -20 -215 -1 -413 60 -269 83 -387 94 -513 47 -73 -27 -128 -96 -89 -111 9 -4 22 7 35 29 31 53 95 77 201 77 106 0 162 -12 370 -76 163 -50 167 -51 300 -51 130 -1 137 0 192 28 32 16 86 53 120 82 35 29 74 56 88 59 53 13 84 47 104 113 6 17 4 22 -11 21 -10 0 -25 -3 -33 -6z"/><path d="M3886 1471 c-22 -23 -30 -43 -34 -81 -5 -57 6 -64 37 -24 19 24 37 100 29 124 -2 6 -16 -3 -32 -19z"/><path d="M3904 1320 c-32 -13 -37 -28 -15 -39 30 -16 73 -13 103 7 22 14 25 21 16 30 -14 14 -73 15 -104 2z"/><path d="M3780 1230 c-13 -9 -13 -11 0 -20 35 -24 130 -24 130 0 0 26 -98 41 -130 20z"/></g></svg>
+    </div>
+  </div>
+</div>
+
+<div class="panel">
+  <h2>Flourish placement</h2>
+  <p>Drag the flourish over the wordmark. Size &amp; rotate with the sliders. Values are relative to the word (em), so they scale in the real logo.</p>
+  <div class="ctl"><label>Width <span id="wv"></span></label><input type="range" id="w" min="20" max="320" value="150"></div>
+  <div class="ctl"><label>Rotate <span id="rv"></span></label><input type="range" id="r" min="-45" max="45" value="0"></div>
+  <div class="seg"><button data-lang="en">EN word</button><button data-lang="kn">ಕನ್ನಡ word</button></div>
+  <pre id="out"></pre>
+  <button id="copy">Copy CSS</button>
+</div>
+
+<script>
+const stage=document.getElementById('stage'), word=document.getElementById('word'), fl=document.getElementById('fl');
+const W=document.getElementById('w'), R=document.getElementById('r'), out=document.getElementById('out');
+const WORD_FS=72;
+let rot=0;
+function render(){
+  fl.style.width=W.value+'px';
+  fl.style.transform='rotate('+R.value+'deg)';
+  rot=+R.value;
+  readout();
+}
+function readout(){
+  const wr=word.getBoundingClientRect(), fr=fl.getBoundingClientRect();
+  // offsets of flourish top-left from word top-left, in em (1em = word font-size)
+  const leftEm=((fl.offsetLeft)-(word.offsetLeft))/WORD_FS;
+  const topEm=((fl.offsetTop)-(word.offsetTop))/WORD_FS;
+  const widthEm=(+W.value)/WORD_FS;
+  const v={left:+leftEm.toFixed(3), top:+topEm.toFixed(3), width:+widthEm.toFixed(3), rotate:rot};
+  window.__flourish=v;
+  out.textContent=
+`/* apply to .brand .twirl */
+position: absolute;
+left: ${v.left}em;
+top: ${v.top}em;
+width: ${v.width}em;
+transform: rotate(${v.rotate}deg);
+/* (.brand{position:relative;font-size:<wordsize>}) */
+
+values: ${JSON.stringify(v)}`;
+}
+// drag
+let dragging=false, sx=0, sy=0, ox=0, oy=0;
+fl.addEventListener('pointerdown',e=>{dragging=true;fl.classList.add('drag');fl.setPointerCapture(e.pointerId);
+  sx=e.clientX;sy=e.clientY;ox=fl.offsetLeft;oy=fl.offsetTop;});
+fl.addEventListener('pointermove',e=>{if(!dragging)return;
+  fl.style.left=(ox+(e.clientX-sx))+'px'; fl.style.top=(oy+(e.clientY-sy))+'px'; readout();});
+fl.addEventListener('pointerup',e=>{dragging=false;fl.classList.remove('drag');});
+W.addEventListener('input',()=>{document.getElementById('wv').textContent=W.value+'px';render();});
+R.addEventListener('input',()=>{document.getElementById('rv').textContent=R.value+'°';render();});
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{word.textContent=b.dataset.lang==='kn'?'ಯುಕ್ತಾಹಾರ':'yuktaahara';readout();});
+document.getElementById('copy').onclick=()=>navigator.clipboard.writeText(out.textContent);
+document.getElementById('wv').textContent=W.value+'px'; document.getElementById('rv').textContent='0°';
+render();
+</script>
+</body>
+</html>
