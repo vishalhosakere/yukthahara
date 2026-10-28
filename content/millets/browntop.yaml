@@ -1,0 +1,17 @@
+name: Browntop
+order: 2
+localName:
+  en: Korle
+  kn: ಕೊರಲೆ
+latin: Brachiaria ramosa
+highlight:
+  en: Fibre-rich grain.
+  kn: ನಾರು-ಸಮೃದ್ಧ.
+nutrition:
+  protein: "~10.7 g*"
+  fibre: "~8 g*"
+  iron: "~8.9 mg*"
+  gi:
+    en: not established
+    kn: ದಾಖಲಿಲ್ಲ
+  giBand: unknown

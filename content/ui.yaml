@@ -1,0 +1,35 @@
+nav:
+  home:
+    en: Home
+    kn: ಮುಖಪುಟ
+  howWeCook:
+    en: How we cook
+    kn: ಅಡುಗೆ ವಿಧಾನ
+  menu:
+    en: Menu
+    kn: ಮೆನು
+  millets:
+    en: Millets
+    kn: ಸಿರಿಧಾನ್ಯ
+  visit:
+    en: Visit
+    kn: ಭೇಟಿ
+labels:
+  explore:
+    en: Explore
+    kn: ಅನ್ವೇಷಿಸಿ
+  contact:
+    en: Contact
+    kn: ಸಂಪರ್ಕ
+  address:
+    en: Address
+    kn: ವಿಳಾಸ
+  hours:
+    en: Hours
+    kn: ಸಮಯ
+  call:
+    en: Call to reserve
+    kn: ಕರೆ ಮಾಡಿ
+  directions:
+    en: Get directions
+    kn: ದಾರಿ ತೋರಿಸಿ

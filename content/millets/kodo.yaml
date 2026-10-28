@@ -1,0 +1,17 @@
+name: Kodo
+order: 3
+localName:
+  en: Harka
+  kn: ಹಾರಕ
+latin: Paspalum scrobiculatum
+highlight:
+  en: High magnesium.
+  kn: ಹೆಚ್ಚು ಮೆಗ್ನೀಸಿಯಂ.
+nutrition:
+  protein: 8.3–8.9 g
+  fibre: 6.4 g
+  iron: 0.5–2.3 mg
+  gi:
+    en: 65 (intermediate)
+    kn: ೬೫ (ಮಧ್ಯಮ)
+  giBand: intermediate

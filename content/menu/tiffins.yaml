@@ -1,0 +1,33 @@
+key: Tiffins
+order: 1
+title:
+  en: Tiffins & breakfast
+  kn: ತಿಂಡಿ ಮತ್ತು ಬೆಳಗಿನ ಉಪಾಹಾರ
+items:
+  - name:
+      en: Foxtail millet dosa
+      kn: ನವಣೆ ದೋಸೆ
+    description:
+      en: Crisp dosa with coconut chutney & sambar.
+      kn: ತೆಂಗಿನ ಚಟ್ನಿ ಮತ್ತು ಸಾಂಬಾರ್‌ನೊಂದಿಗೆ ಗರಿಗರಿ ದೋಸೆ.
+    price: 90
+    tags:
+      - gluten-free
+      - low-gi
+  - name:
+      en: Little millet idli (2)
+      kn: ಸಾಮೆ ಇಡ್ಲಿ (೨)
+    description:
+      en: Soft steamed idlis, chutney trio.
+      kn: ಮೃದು ಆವಿಯಲ್ಲಿ ಬೇಯಿಸಿದ ಇಡ್ಲಿ, ಮೂರು ಚಟ್ನಿ.
+    price: 80
+    tags:
+      - vegan
+  - name:
+      en: Barnyard millet pongal
+      kn: ಊದಲು ಪೊಂಗಲ್
+    description:
+      en: Comforting pepper-cumin pongal, ghee optional.
+      kn: ಮೆಣಸು-ಜೀರಿಗೆ ಪೊಂಗಲ್, ತುಪ್ಪ ಐಚ್ಛಿಕ.
+    price: 110
+    tags: []

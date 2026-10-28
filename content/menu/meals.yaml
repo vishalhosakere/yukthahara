@@ -1,0 +1,32 @@
+key: Meals
+order: 2
+title:
+  en: Meals & bowls
+  kn: ಊಟ ಮತ್ತು ಬೌಲ್
+items:
+  - name:
+      en: Siridhanya thali
+      kn: ಸಿರಿಧಾನ್ಯ ಥಾಲಿ
+    description:
+      en: Millet rice, two curries, greens, rasam, curd, papad.
+      kn: ಸಿರಿಧಾನ್ಯ ಅನ್ನ, ಎರಡು ಪಲ್ಯ, ಸೊಪ್ಪು, ರಸಂ, ಮೊಸರು, ಹಪ್ಪಳ.
+    price: 190
+    tags:
+      - wholesome
+  - name:
+      en: Kodo millet bisi bele bath
+      kn: ಹಾರಕ ಬಿಸಿ ಬೇಳೆ ಬಾತ್
+    description:
+      en: Mysore-style one-pot with lentils & vegetables.
+      kn: ಬೇಳೆ ಮತ್ತು ತರಕಾರಿಯ ಮೈಸೂರು ಶೈಲಿ.
+    price: 150
+    tags: []
+  - name:
+      en: Foxtail millet buddha bowl
+      kn: ನವಣೆ ಬುದ್ಧ ಬೌಲ್
+    description:
+      en: Millet, roasted veg, greens, seed dressing.
+      kn: ಸಿರಿಧಾನ್ಯ, ಸುಟ್ಟ ತರಕಾರಿ, ಸೊಪ್ಪು, ಬೀಜದ ಡ್ರೆಸ್ಸಿಂಗ್.
+    price: 170
+    tags:
+      - vegan

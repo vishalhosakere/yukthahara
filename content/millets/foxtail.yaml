@@ -1,0 +1,17 @@
+name: Foxtail
+order: 1
+localName:
+  en: Navane
+  kn: ನವಣೆ
+latin: Setaria italica
+highlight:
+  en: High protein; low GI.
+  kn: ಹೆಚ್ಚು ಪ್ರೋಟೀನ್; ಕಡಿಮೆ ಜಿಐ.
+nutrition:
+  protein: 12.3 g
+  fibre: 8.0 g
+  iron: 2.8 mg
+  gi:
+    en: 54 (low)
+    kn: ೫೪ (ಕಡಿಮೆ)
+  giBand: low

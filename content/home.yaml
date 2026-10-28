@@ -1,0 +1,234 @@
+hero:
+  eyebrow:
+    en: Millet · the apt food
+    kn: ಸಿರಿಧಾನ್ಯ · ಯುಕ್ತವಾದ ಆಹಾರ
+  headline:
+    en: "Eat right,\neat *millets.*"
+    kn: "ಸರಿಯಾಗಿ ತಿನ್ನಿ,\n*ಸಿರಿಧಾನ್ಯ* ತಿನ್ನಿ."
+  intro:
+    en: "A millet kitchen in Mysore, cooked *the old way* — wood-pressed oils, clay and iron, palm jaggery, and the five positive siridhanya grains."
+    kn: "ಮೈಸೂರಿನ ಸಿರಿಧಾನ್ಯ ಅಡುಗೆಮನೆ — *ಗಾಣದ ಎಣ್ಣೆ*, ಮಣ್ಣು ಮತ್ತು ಕಬ್ಬಿಣ, ತಾಳೆ ಬೆಲ್ಲ, ಮತ್ತು ಪಂಚ ಸಿರಿಧಾನ್ಯ."
+  primaryCta:
+    en: View the menu
+    kn: ಮೆನು ನೋಡಿ
+  secondaryCta:
+    en: Visit us
+    kn: ಭೇಟಿ ನೀಡಿ
+  image: /media/millet-ears-golden-field.jpg
+  imageAlt: Golden millet heads standing against a pale morning sky
+  video: /media/hero-field.mp4
+  playVideo: false
+practices:
+  eyebrow:
+    en: How we cook
+    kn: ನಾವು ಹೇಗೆ ಅಡುಗೆ ಮಾಡುತ್ತೇವೆ
+  heading:
+    en: "Nothing refined. *Nothing hidden.*"
+    kn: "ಸಂಸ್ಕರಿಸಿದ್ದು ಇಲ್ಲ. *ಮರೆಮಾಚಿದ್ದೂ ಇಲ್ಲ.*"
+  items:
+    - title:
+        en: Wood-pressed oils
+        kn: ಗಾಣದ ಎಣ್ಣೆ
+      body:
+        en: Cold-pressed in a bull-driven gaana — no solvents, no bleaching, no deodorising. The oil keeps its aroma and natural nutrients.
+        kn: ಎತ್ತಿನ ಗಾಣದಲ್ಲಿ ತಣ್ಣಗೆ ಹಿಂಡಿದ್ದು — ರಾಸಾಯನಿಕ ಇಲ್ಲ. ಎಣ್ಣೆಯ ಸುವಾಸನೆ ಮತ್ತು ಪೋಷಕಾಂಶ ಉಳಿಯುತ್ತದೆ.
+      nevers:
+        - en: No refined oil
+          kn: ಸಂಸ್ಕರಿಸಿದ ಎಣ್ಣೆ ಇಲ್ಲ
+    - title:
+        en: Iron, clay & brass
+        kn: ಕಬ್ಬಿಣ, ಮಣ್ಣು, ಹಿತ್ತಾಳೆ
+      body:
+        en: Hot, sour food can pull aluminium into your meal. Our vessels are inert — and iron even adds a little dietary iron.
+        kn: ಬಿಸಿ, ಹುಳಿ ಆಹಾರ ಅಲ್ಯುಮಿನಿಯಂ ಅನ್ನು ಸೇರಿಸಬಹುದು. ನಮ್ಮ ಪಾತ್ರೆಗಳು ಸುರಕ್ಷಿತ — ಕಬ್ಬಿಣ ಸ್ವಲ್ಪ ಕಬ್ಬಿಣಾಂಶವನ್ನೂ ಸೇರಿಸುತ್ತದೆ.
+      nevers:
+        - en: No aluminium
+          kn: ಅಲ್ಯುಮಿನಿಯಂ ಇಲ್ಲ
+        - en: No non-stick
+          kn: ನಾನ್-ಸ್ಟಿಕ್ ಇಲ್ಲ
+    - title:
+        en: Only siridhanya
+        kn: ಕೇವಲ ಸಿರಿಧಾನ್ಯ
+      body:
+        en: More fibre, lower glycemic index, gluten-free — the five positive millets, grown on rain, not chemicals.
+        kn: ಹೆಚ್ಚು ನಾರು, ಕಡಿಮೆ ಜಿಐ, ಗ್ಲುಟನ್-ಮುಕ್ತ — ಮಳೆಯಿಂದ ಬೆಳೆದ ಪಂಚ ಸಿರಿಧಾನ್ಯ.
+      nevers:
+        - en: No rice
+          kn: ಅಕ್ಕಿ ಇಲ್ಲ
+        - en: No wheat
+          kn: ಗೋಧಿ ಇಲ್ಲ
+    - title:
+        en: Palm jaggery only
+        kn: ಕೇವಲ ತಾಳೆ ಬೆಲ್ಲ
+      body:
+        en: Unrefined and unbleached, it keeps the minerals white sugar loses. Still a treat — enjoyed simply.
+        kn: ಸಂಸ್ಕರಿಸದ, ಬಿಳಿಚದ ಬೆಲ್ಲ — ಬಿಳಿ ಸಕ್ಕರೆ ಕಳೆದುಕೊಳ್ಳುವ ಖನಿಜಗಳನ್ನು ಉಳಿಸುತ್ತದೆ.
+      nevers:
+        - en: No refined sugar
+          kn: ಸಕ್ಕರೆ ಇಲ್ಲ
+  callout:
+    title:
+      en: Why bother?
+      kn: ಏಕೆ ಇಷ್ಟೆಲ್ಲಾ?
+    body:
+      en: Refining strips flavour and nutrients for shelf-life and margins. We'd rather cook the way food was meant to be eaten — and tell you exactly how.
+      kn: ಸಂಸ್ಕರಣೆ ರುಚಿ ಮತ್ತು ಪೋಷಕಾಂಶವನ್ನು ಕಳೆಯುತ್ತದೆ. ಆಹಾರವನ್ನು ಇರಬೇಕಾದ ರೀತಿಯಲ್ಲಿ ಬೇಯಿಸುತ್ತೇವೆ — ಹೇಗೆ ಎಂದೂ ಹೇಳುತ್ತೇವೆ.
+nutrition:
+  eyebrow:
+    en: The holistic choice
+    kn: ಸಮಗ್ರ ಆಯ್ಕೆ
+  heading:
+    en: "More of what *matters.*"
+    kn: "ಬೇಕಾದದ್ದೇ *ಹೆಚ್ಚು.*"
+  columns:
+    nutrient:
+      en: Per 100g
+      kn: ಪ್ರತಿ ೧೦೦ಗ್ರಾಂ
+    millet:
+      en: Millet · foxtail
+      kn: ಸಿರಿಧಾನ್ಯ · ನವಣೆ
+    rice:
+      en: White rice
+      kn: ಬಿಳಿ ಅಕ್ಕಿ
+    wheat:
+      en: Refined wheat
+      kn: ಸಂಸ್ಕರಿಸಿದ ಗೋಧಿ
+  rows:
+    - label:
+        en: Dietary fibre
+        kn: ಆಹಾರ ನಾರು
+      millet: 8.0 g
+      rice: 1.3 g
+      wheat: 2.7 g
+      lowerIsBetter: false
+    - label:
+        en: Protein
+        kn: ಪ್ರೋಟೀನ್
+      millet: 12.3 g
+      rice: 7.1 g
+      wheat: 10.3 g
+      lowerIsBetter: false
+    - label:
+        en: Glycemic index
+        kn: ಗ್ಲೈಸೆಮಿಕ್ ಸೂಚ್ಯಂಕ
+      millet: "~53"
+      rice: "~72"
+      wheat: "~74"
+      lowerIsBetter: true
+    - label:
+        en: Iron
+        kn: ಕಬ್ಬಿಣ
+      millet: 2.8 mg
+      rice: 0.8 mg
+      wheat: 1.2 mg
+      lowerIsBetter: false
+    - label:
+        en: Magnesium
+        kn: ಮೆಗ್ನೀಸಿಯಂ
+      millet: 81 mg
+      rice: 25 mg
+      wheat: 22 mg
+      lowerIsBetter: false
+  lowerIsBetter:
+    en: Lower is better
+    kn: ಕಡಿಮೆ ಇದ್ದಷ್ಟು ಉತ್ತಮ
+  note:
+    en: "Millets clearly beat polished rice and refined wheat on fibre, magnesium and glycemic index. Whole wheat is a closer match — the honest comparison is against refined staples. Source: IFCT 2017 / USDA."
+    kn: "ಸಿರಿಧಾನ್ಯ ಪಾಲಿಶ್ ಅಕ್ಕಿ ಮತ್ತು ಸಂಸ್ಕರಿಸಿದ ಗೋಧಿಗಿಂತ ನಾರು, ಮೆಗ್ನೀಸಿಯಂ, ಜಿಐನಲ್ಲಿ ಉತ್ತಮ. ಇಡೀ ಗೋಧಿ ಸಮೀಪದ ಸಾಟಿ. ಮೂಲ: IFCT 2017 / USDA."
+  disclaimer:
+    en: Millets are a nutritious whole grain that supports a balanced diet — not a cure for any disease. Consult a doctor before changing your diet for a medical condition.
+    kn: ಸಿರಿಧಾನ್ಯ ಸಮತೋಲಿತ ಆಹಾರಕ್ಕೆ ಪೂರಕ — ರೋಗಪರಿಹಾರವಲ್ಲ. ವೈದ್ಯರನ್ನು ಸಂಪರ್ಕಿಸಿ.
+siridhanya:
+  eyebrow:
+    en: The five siridhanya
+    kn: ಪಂಚ ಸಿರಿಧಾನ್ಯ
+  heading:
+    en: "Five *positive* millets."
+    kn: "ಐದು *ಧನಾತ್ಮಕ* ಸಿರಿಧಾನ್ಯ."
+  stats:
+    - value: 6×
+      label:
+        en: the fibre of white rice
+        kn: ಬಿಳಿ ಅಕ್ಕಿಗಿಂತ ಹೆಚ್ಚು ನಾರು
+    - value: "54"
+      label:
+        en: GI (foxtail) — low, vs ~72 rice
+        kn: ಜಿಐ (ನವಣೆ) — ಕಡಿಮೆ, ಅಕ್ಕಿ ~೭೨
+    - value: 3×
+      label:
+        en: the magnesium of refined wheat
+        kn: ಗೋಧಿಗಿಂತ ಹೆಚ್ಚು ಮೆಗ್ನೀಸಿಯಂ
+  cta:
+    en: Learn about millets
+    kn: ಸಿರಿಧಾನ್ಯ ಬಗ್ಗೆ
+environment:
+  eyebrow:
+    en: Kind to the earth
+    kn: ಭೂಮಿಗೆ ಒಳಿತು
+  heading:
+    en: Ancient grains for a warming world.
+    kn: ಬಿಸಿಯಾಗುತ್ತಿರುವ ಜಗತ್ತಿಗೆ ಪುರಾತನ ಧಾನ್ಯ.
+  body:
+    en: Millets are C4 grasses — more grain from less water, grown on the rain alone, ripe in weeks.
+    kn: ಸಿರಿಧಾನ್ಯ ಸಿ4 ಹುಲ್ಲುಗಳು — ಕಡಿಮೆ ನೀರಿನಲ್ಲಿ ಹೆಚ್ಚು ಧಾನ್ಯ, ಮಳೆಯಿಂದಲೇ ಬೆಳೆಯುತ್ತವೆ.
+  stats:
+    - value: 5×
+      label:
+        en: less water/kg than rice (up to)
+        kn: ಅಕ್ಕಿಗಿಂತ ಕಡಿಮೆ ನೀರು (ವರೆಗೆ)
+    - value: 200–300
+      label:
+        en: mm rainfall — rice needs 1200–2000
+        kn: ಮಿಮೀ ಮಳೆ — ಅಕ್ಕಿಗೆ ೧೨೦೦–೨೦೦೦
+    - value: 45–90
+      label:
+        en: days, rainfed to harvest
+        kn: ದಿನ, ಮಳೆಯಾಶ್ರಿತ ಕೊಯ್ಲು
+story:
+  eyebrow:
+    en: The millet revolution
+    kn: ಸಿರಿಧಾನ್ಯ ಕ್ರಾಂತಿ
+  heading:
+    en: Grains brought home.
+    kn: ಮನೆಗೆ ಮರಳಿದ ಧಾನ್ಯ.
+  body:
+    en: "Dr. Khadar Vali — the “Millet Man of India,” a Mysuru food scientist and Padma Shri awardee — revived five near-extinct millets he calls siridhanya. His message is simple: return to traditional grains, grown without chemicals, as part of a balanced life."
+    kn: "ಡಾ. ಖಾದರ್ ವಲಿ — “ಭಾರತದ ಸಿರಿಧಾನ್ಯ ಪುರುಷ,” ಮೈಸೂರಿನ ಆಹಾರ ವಿಜ್ಞಾನಿ, ಪದ್ಮಶ್ರೀ — ಐದು ಸಿರಿಧಾನ್ಯಗಳನ್ನು ಪುನರುಜ್ಜೀವನಗೊಳಿಸಿದರು. ಸಂದೇಶ ಸರಳ: ರಾಸಾಯನಿಕ ಇಲ್ಲದ ಸಾಂಪ್ರದಾಯಿಕ ಧಾನ್ಯಗಳಿಗೆ ಮರಳಿ."
+  image: /media/millet-grains-raw.jpg
+  imageAlt: A ripe millet head on the plant, in a green field
+menuPreview:
+  eyebrow:
+    en: From our kitchen
+    kn: ನಮ್ಮ ಅಡುಗೆಮನೆಯಿಂದ
+  heading:
+    en: Everyday millet cooking.
+    kn: ದೈನಂದಿನ ಸಿರಿಧಾನ್ಯ ಅಡುಗೆ.
+  tiles:
+    - image: /media/millet-dosa.jpg
+      imageAlt: A crisp dosa with chutneys and sambar on a cane stool
+      caption:
+        en: Dosa & tiffins
+        kn: ದೋಸೆ, ತಿಂಡಿ
+      category: tiffins
+    - image: /media/south-indian-thali.jpg
+      imageAlt: A steel thali with curries, rotis and papad, seen from above
+      caption:
+        en: Meals & bowls
+        kn: ಊಟ, ಬೌಲ್
+      category: meals
+    - image: /media/thali-wooden-table.jpg
+      imageAlt: A steel thali with papad and curries on a wooden table
+      caption:
+        en: Sweets & drinks
+        kn: ಸಿಹಿ, ಪಾನೀಯ
+      category: sweets-drinks
+  cta:
+    en: See the full menu
+    kn: ಪೂರ್ಣ ಮೆನು
+visit:
+  eyebrow:
+    en: Visit us
+    kn: ಭೇಟಿ ಮಾಡಿ
+  mapLabel:
+    en: Open in Maps
+    kn: ನಕ್ಷೆಯಲ್ಲಿ ತೆರೆಯಿರಿ

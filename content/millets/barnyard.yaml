@@ -1,0 +1,17 @@
+name: Barnyard
+order: 5
+localName:
+  en: Oodalu
+  kn: ಊದಲು
+latin: Echinochloa frumentacea
+highlight:
+  en: Lowest GI of the five.
+  kn: ಐದರಲ್ಲಿ ಕಡಿಮೆ ಜಿಐ.
+nutrition:
+  protein: 6.2–11.2 g†
+  fibre: 9.8 g
+  iron: 5–15 mg†
+  gi:
+    en: 42 (low)
+    kn: ೪೨ (ಕಡಿಮೆ)
+  giBand: low

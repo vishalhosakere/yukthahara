@@ -1,0 +1,31 @@
+key: Sweets & drinks
+order: 3
+title:
+  en: Sweets & drinks
+  kn: ಸಿಹಿ ಮತ್ತು ಪಾನೀಯ
+items:
+  - name:
+      en: Millet payasa
+      kn: ಸಿರಿಧಾನ್ಯ ಪಾಯಸ
+    description:
+      en: Jaggery-sweetened, cardamom, no refined sugar.
+      kn: ಬೆಲ್ಲದ ಸಿಹಿ, ಏಲಕ್ಕಿ, ಸಂಸ್ಕರಿಸಿದ ಸಕ್ಕರೆ ಇಲ್ಲ.
+    price: 90
+    tags:
+      - no-refined-sugar
+  - name:
+      en: Ragi–date shake
+      kn: ರಾಗಿ–ಖರ್ಜೂರ ಶೇಕ್
+    description:
+      en: Finger-millet malt, dates, milk.
+      kn: ರಾಗಿ ಮಾಲ್ಟ್, ಖರ್ಜೂರ, ಹಾಲು.
+    price: 80
+    tags: []
+  - name:
+      en: Filter coffee
+      kn: ಫಿಲ್ಟರ್ ಕಾಫಿ
+    description:
+      en: Mysore filter, jaggery on request.
+      kn: ಮೈಸೂರು ಫಿಲ್ಟರ್, ಕೇಳಿದರೆ ಬೆಲ್ಲ.
+    price: 40
+    tags: []
