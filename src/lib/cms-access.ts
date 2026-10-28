@@ -4,5 +4,7 @@
  */
 export function isCmsEnabled(): boolean {
   const storage = process.env.NEXT_PUBLIC_KEYSTATIC_STORAGE;
-  return storage === "github" || storage === "cloud" || process.env.KEYSTATIC_LOCAL_ADMIN === "true";
+  // Local mode's save API is unauthenticated, so the opt-in only ever works under `next dev` on loopback.
+  const localOptIn = process.env.KEYSTATIC_LOCAL_ADMIN === "true" && process.env.NODE_ENV === "development";
+  return storage === "github" || storage === "cloud" || localOptIn;
 }

@@ -16,10 +16,10 @@ items:
       - low-gi
   - name:
       en: Little millet idli (2)
-      kn: ಸಾಮೆ ಇಡ್ಲಿ (೨)
+      kn: ಸಾಮೆ ಇಡ್ಲಿ (2)
     description:
       en: Soft steamed idlis, chutney trio.
-      kn: ಮೃದು ಆವಿಯಲ್ಲಿ ಬೇಯಿಸಿದ ಇಡ್ಲಿ, ಮೂರು ಚಟ್ನಿ.
+      kn: ಆವಿಯಲ್ಲಿ ಬೇಯಿಸಿದ ಮೃದುವಾದ ಇಡ್ಲಿ, ಮೂರು ಬಗೆಯ ಚಟ್ನಿ.
     price: 80
     tags:
       - vegan
@@ -28,6 +28,6 @@ items:
       kn: ಊದಲು ಪೊಂಗಲ್
     description:
       en: Comforting pepper-cumin pongal, ghee optional.
-      kn: ಮೆಣಸು-ಜೀರಿಗೆ ಪೊಂಗಲ್, ತುಪ್ಪ ಐಚ್ಛಿಕ.
+      kn: ಹಿತವಾದ ಮೆಣಸು-ಜೀರಿಗೆ ಪೊಂಗಲ್, ಬೇಕಿದ್ದರೆ ತುಪ್ಪ.
     price: 110
     tags: []

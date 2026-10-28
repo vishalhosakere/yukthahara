@@ -340,19 +340,22 @@
   }
   .brand .twirl {
     position: absolute;
-    left: 3.153em;
+    left: 3.343em;
     top: 50%;
     width: 2.653em;
     height: auto;
     color: var(--accent);
     pointer-events: none;
   }
-  /* The flourish is drawn for the Latin wordmark. */
+  /* ಯುಕ್ತಾಹಾರ is narrower and has a stacked ತ, so the flourish is anchored to the word's end and sits under ಹಾರ. */
   html[data-lang="kn"] .brand .twirl {
-    display: none;
+    left: auto;
+    right: -0.64em;
+    top: auto;
+    bottom: 0.07em;
   }
   html[data-lang="kn"] .brand .word {
-    padding-bottom: 0;
+    padding-bottom: 0.34em;
   }
   .brand--lg {
     font-size: 38px;

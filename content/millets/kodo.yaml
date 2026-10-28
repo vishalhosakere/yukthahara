@@ -1,7 +1,7 @@
 name: Kodo
 order: 3
 localName:
-  en: Harka
+  en: Haraka
   kn: ಹಾರಕ
 latin: Paspalum scrobiculatum
 highlight:
@@ -13,5 +13,5 @@ nutrition:
   iron: 0.5–2.3 mg
   gi:
     en: 65 (intermediate)
-    kn: ೬೫ (ಮಧ್ಯಮ)
+    kn: 65 (ಮಧ್ಯಮ)
   giBand: intermediate

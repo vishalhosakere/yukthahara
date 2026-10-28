@@ -1,17 +1,17 @@
 name: Little
 order: 4
 localName:
-  en: Same
+  en: Saame
   kn: ಸಾಮೆ
 latin: Panicum sumatrense
 highlight:
   en: Good fibre.
-  kn: ಉತ್ತಮ ನಾರು.
+  kn: ಉತ್ತಮ ಪ್ರಮಾಣದ ನಾರು.
 nutrition:
   protein: 7.7–10.1 g
   fibre: 7.7 g
   iron: 1.2–9.3 mg†
   gi:
     en: 64 (intermediate)
-    kn: ೬೪ (ಮಧ್ಯಮ)
+    kn: 64 (ಮಧ್ಯಮ)
   giBand: intermediate

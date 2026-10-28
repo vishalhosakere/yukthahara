@@ -9,7 +9,7 @@ items:
       kn: ಸಿರಿಧಾನ್ಯ ಥಾಲಿ
     description:
       en: Millet rice, two curries, greens, rasam, curd, papad.
-      kn: ಸಿರಿಧಾನ್ಯ ಅನ್ನ, ಎರಡು ಪಲ್ಯ, ಸೊಪ್ಪು, ರಸಂ, ಮೊಸರು, ಹಪ್ಪಳ.
+      kn: ಸಿರಿಧಾನ್ಯದ ಅನ್ನ, ಎರಡು ಬಗೆಯ ಪಲ್ಯ, ಸೊಪ್ಪು, ಸಾರು, ಮೊಸರು, ಹಪ್ಪಳ.
     price: 190
     tags:
       - wholesome
@@ -18,7 +18,7 @@ items:
       kn: ಹಾರಕ ಬಿಸಿ ಬೇಳೆ ಬಾತ್
     description:
       en: Mysore-style one-pot with lentils & vegetables.
-      kn: ಬೇಳೆ ಮತ್ತು ತರಕಾರಿಯ ಮೈಸೂರು ಶೈಲಿ.
+      kn: ಬೇಳೆ ಮತ್ತು ತರಕಾರಿಗಳೊಂದಿಗೆ ಒಂದೇ ಪಾತ್ರೆಯಲ್ಲಿ ಬೇಯಿಸಿದ ಮೈಸೂರು ಶೈಲಿಯ ಖಾದ್ಯ.
     price: 150
     tags: []
   - name:
@@ -26,7 +26,7 @@ items:
       kn: ನವಣೆ ಬುದ್ಧ ಬೌಲ್
     description:
       en: Millet, roasted veg, greens, seed dressing.
-      kn: ಸಿರಿಧಾನ್ಯ, ಸುಟ್ಟ ತರಕಾರಿ, ಸೊಪ್ಪು, ಬೀಜದ ಡ್ರೆಸ್ಸಿಂಗ್.
+      kn: ನವಣೆ, ಹುರಿದ ತರಕಾರಿ, ಸೊಪ್ಪು, ಬೀಜಗಳ ಡ್ರೆಸ್ಸಿಂಗ್.
     price: 170
     tags:
       - vegan

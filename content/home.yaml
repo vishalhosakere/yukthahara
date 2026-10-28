@@ -7,7 +7,7 @@ hero:
     kn: "ಸರಿಯಾಗಿ ತಿನ್ನಿ,\n*ಸಿರಿಧಾನ್ಯ* ತಿನ್ನಿ."
   intro:
     en: "A millet kitchen in Mysore, cooked *the old way* — wood-pressed oils, clay and iron, palm jaggery, and the five positive siridhanya grains."
-    kn: "ಮೈಸೂರಿನ ಸಿರಿಧಾನ್ಯ ಅಡುಗೆಮನೆ — *ಗಾಣದ ಎಣ್ಣೆ*, ಮಣ್ಣು ಮತ್ತು ಕಬ್ಬಿಣ, ತಾಳೆ ಬೆಲ್ಲ, ಮತ್ತು ಪಂಚ ಸಿರಿಧಾನ್ಯ."
+    kn: "ಮೈಸೂರಿನ ಸಿರಿಧಾನ್ಯ ಅಡುಗೆಮನೆ, *ಹಳೆಯ ಪದ್ಧತಿಯಲ್ಲಿ* — ಗಾಣದ ಎಣ್ಣೆ, ಮಣ್ಣಿನ ಮತ್ತು ಕಬ್ಬಿಣದ ಪಾತ್ರೆಗಳು, ತಾಳೆ ಬೆಲ್ಲ ಮತ್ತು ಪಂಚ ಸಿರಿಧಾನ್ಯ."
   primaryCta:
     en: View the menu
     kn: ಮೆನು ನೋಡಿ
@@ -31,7 +31,7 @@ practices:
         kn: ಗಾಣದ ಎಣ್ಣೆ
       body:
         en: Cold-pressed in a bull-driven gaana — no solvents, no bleaching, no deodorising. The oil keeps its aroma and natural nutrients.
-        kn: ಎತ್ತಿನ ಗಾಣದಲ್ಲಿ ತಣ್ಣಗೆ ಹಿಂಡಿದ್ದು — ರಾಸಾಯನಿಕ ಇಲ್ಲ. ಎಣ್ಣೆಯ ಸುವಾಸನೆ ಮತ್ತು ಪೋಷಕಾಂಶ ಉಳಿಯುತ್ತದೆ.
+        kn: ಎತ್ತಿನ ಗಾಣದಲ್ಲಿ ಹಿಂಡಿದ ಎಣ್ಣೆ — ರಾಸಾಯನಿಕ ದ್ರಾವಕಗಳಿಲ್ಲ, ಬಿಳುಪುಗೊಳಿಸುವುದಿಲ್ಲ, ವಾಸನೆ ತೆಗೆಯುವುದಿಲ್ಲ. ಎಣ್ಣೆಯ ಸುವಾಸನೆ ಮತ್ತು ನೈಸರ್ಗಿಕ ಪೋಷಕಾಂಶಗಳು ಉಳಿಯುತ್ತವೆ.
       nevers:
         - en: No refined oil
           kn: ಸಂಸ್ಕರಿಸಿದ ಎಣ್ಣೆ ಇಲ್ಲ
@@ -40,18 +40,18 @@ practices:
         kn: ಕಬ್ಬಿಣ, ಮಣ್ಣು, ಹಿತ್ತಾಳೆ
       body:
         en: Hot, sour food can pull aluminium into your meal. Our vessels are inert — and iron even adds a little dietary iron.
-        kn: ಬಿಸಿ, ಹುಳಿ ಆಹಾರ ಅಲ್ಯುಮಿನಿಯಂ ಅನ್ನು ಸೇರಿಸಬಹುದು. ನಮ್ಮ ಪಾತ್ರೆಗಳು ಸುರಕ್ಷಿತ — ಕಬ್ಬಿಣ ಸ್ವಲ್ಪ ಕಬ್ಬಿಣಾಂಶವನ್ನೂ ಸೇರಿಸುತ್ತದೆ.
+        kn: ಬಿಸಿಯಾದ, ಹುಳಿಯಾದ ಆಹಾರ ಅಲ್ಯೂಮಿನಿಯಂ ಪಾತ್ರೆಯ ಲೋಹವನ್ನು ಊಟಕ್ಕೆ ಸೇರಿಸಬಹುದು. ನಮ್ಮ ಪಾತ್ರೆಗಳು ಹಾಗೆ ಮಾಡುವುದಿಲ್ಲ — ಕಬ್ಬಿಣದ ಪಾತ್ರೆ ಸ್ವಲ್ಪ ಕಬ್ಬಿಣಾಂಶವನ್ನೂ ಸೇರಿಸುತ್ತದೆ.
       nevers:
         - en: No aluminium
-          kn: ಅಲ್ಯುಮಿನಿಯಂ ಇಲ್ಲ
+          kn: ಅಲ್ಯೂಮಿನಿಯಂ ಇಲ್ಲ
         - en: No non-stick
           kn: ನಾನ್-ಸ್ಟಿಕ್ ಇಲ್ಲ
     - title:
         en: Only siridhanya
-        kn: ಕೇವಲ ಸಿರಿಧಾನ್ಯ
+        kn: ಸಿರಿಧಾನ್ಯ ಮಾತ್ರ
       body:
         en: More fibre, lower glycemic index, gluten-free — the five positive millets, grown on rain, not chemicals.
-        kn: ಹೆಚ್ಚು ನಾರು, ಕಡಿಮೆ ಜಿಐ, ಗ್ಲುಟನ್-ಮುಕ್ತ — ಮಳೆಯಿಂದ ಬೆಳೆದ ಪಂಚ ಸಿರಿಧಾನ್ಯ.
+        kn: ಹೆಚ್ಚು ನಾರು, ಕಡಿಮೆ ಗ್ಲೈಸೆಮಿಕ್ ಸೂಚ್ಯಂಕ, ಗ್ಲುಟನ್-ಮುಕ್ತ — ರಾಸಾಯನಿಕಗಳಿಲ್ಲದೆ, ಮಳೆನೀರಿನಲ್ಲೇ ಬೆಳೆದ ಪಂಚ ಸಿರಿಧಾನ್ಯ.
       nevers:
         - en: No rice
           kn: ಅಕ್ಕಿ ಇಲ್ಲ
@@ -59,20 +59,20 @@ practices:
           kn: ಗೋಧಿ ಇಲ್ಲ
     - title:
         en: Palm jaggery only
-        kn: ಕೇವಲ ತಾಳೆ ಬೆಲ್ಲ
+        kn: ತಾಳೆ ಬೆಲ್ಲ ಮಾತ್ರ
       body:
         en: Unrefined and unbleached, it keeps the minerals white sugar loses. Still a treat — enjoyed simply.
-        kn: ಸಂಸ್ಕರಿಸದ, ಬಿಳಿಚದ ಬೆಲ್ಲ — ಬಿಳಿ ಸಕ್ಕರೆ ಕಳೆದುಕೊಳ್ಳುವ ಖನಿಜಗಳನ್ನು ಉಳಿಸುತ್ತದೆ.
+        kn: ಸಂಸ್ಕರಿಸದ, ಬಿಳುಪುಗೊಳಿಸದ ಬೆಲ್ಲ — ಬಿಳಿ ಸಕ್ಕರೆ ಕಳೆದುಕೊಳ್ಳುವ ಖನಿಜಗಳನ್ನು ಉಳಿಸಿಕೊಳ್ಳುತ್ತದೆ. ಆದರೂ ಸಿಹಿಯೇ — ಮಿತವಾಗಿ ಸವಿಯಿರಿ.
       nevers:
         - en: No refined sugar
-          kn: ಸಕ್ಕರೆ ಇಲ್ಲ
+          kn: ಸಂಸ್ಕರಿಸಿದ ಸಕ್ಕರೆ ಇಲ್ಲ
   callout:
     title:
       en: Why bother?
       kn: ಏಕೆ ಇಷ್ಟೆಲ್ಲಾ?
     body:
       en: Refining strips flavour and nutrients for shelf-life and margins. We'd rather cook the way food was meant to be eaten — and tell you exactly how.
-      kn: ಸಂಸ್ಕರಣೆ ರುಚಿ ಮತ್ತು ಪೋಷಕಾಂಶವನ್ನು ಕಳೆಯುತ್ತದೆ. ಆಹಾರವನ್ನು ಇರಬೇಕಾದ ರೀತಿಯಲ್ಲಿ ಬೇಯಿಸುತ್ತೇವೆ — ಹೇಗೆ ಎಂದೂ ಹೇಳುತ್ತೇವೆ.
+      kn: ಹೆಚ್ಚು ದಿನ ಬಾಳಿಕೆ ಮತ್ತು ಲಾಭಕ್ಕಾಗಿ ಮಾಡುವ ಸಂಸ್ಕರಣೆ ರುಚಿಯನ್ನೂ ಪೋಷಕಾಂಶಗಳನ್ನೂ ಕಳೆಯುತ್ತದೆ. ಆಹಾರವನ್ನು ಹೇಗೆ ತಿನ್ನಬೇಕೋ ಹಾಗೆಯೇ ಬೇಯಿಸುತ್ತೇವೆ — ಹೇಗೆ ಎಂಬುದನ್ನೂ ನಿಮಗೆ ಹೇಳುತ್ತೇವೆ.
 nutrition:
   eyebrow:
     en: The holistic choice
@@ -83,7 +83,7 @@ nutrition:
   columns:
     nutrient:
       en: Per 100g
-      kn: ಪ್ರತಿ ೧೦೦ಗ್ರಾಂ
+      kn: ಪ್ರತಿ 100 ಗ್ರಾಂ
     millet:
       en: Millet · foxtail
       kn: ಸಿರಿಧಾನ್ಯ · ನವಣೆ
@@ -92,7 +92,7 @@ nutrition:
       kn: ಬಿಳಿ ಅಕ್ಕಿ
     wheat:
       en: Refined wheat
-      kn: ಸಂಸ್ಕರಿಸಿದ ಗೋಧಿ
+      kn: ಸಂಸ್ಕರಿಸಿದ ಗೋಧಿ (ಮೈದಾ)
   rows:
     - label:
         en: Dietary fibre
@@ -117,7 +117,7 @@ nutrition:
       lowerIsBetter: true
     - label:
         en: Iron
-        kn: ಕಬ್ಬಿಣ
+        kn: ಕಬ್ಬಿಣಾಂಶ
       millet: 2.8 mg
       rice: 0.8 mg
       wheat: 1.2 mg
@@ -134,17 +134,17 @@ nutrition:
     kn: ಕಡಿಮೆ ಇದ್ದಷ್ಟು ಉತ್ತಮ
   note:
     en: "Millets clearly beat polished rice and refined wheat on fibre, magnesium and glycemic index. Whole wheat is a closer match — the honest comparison is against refined staples. Source: IFCT 2017 / USDA."
-    kn: "ಸಿರಿಧಾನ್ಯ ಪಾಲಿಶ್ ಅಕ್ಕಿ ಮತ್ತು ಸಂಸ್ಕರಿಸಿದ ಗೋಧಿಗಿಂತ ನಾರು, ಮೆಗ್ನೀಸಿಯಂ, ಜಿಐನಲ್ಲಿ ಉತ್ತಮ. ಇಡೀ ಗೋಧಿ ಸಮೀಪದ ಸಾಟಿ. ಮೂಲ: IFCT 2017 / USDA."
+    kn: "ನಾರು, ಮೆಗ್ನೀಸಿಯಂ ಮತ್ತು ಗ್ಲೈಸೆಮಿಕ್ ಸೂಚ್ಯಂಕದಲ್ಲಿ ಸಿರಿಧಾನ್ಯಗಳು ಪಾಲಿಶ್ ಅಕ್ಕಿ ಮತ್ತು ಮೈದಾಗಿಂತ ಸ್ಪಷ್ಟವಾಗಿ ಉತ್ತಮ. ಪೂರ್ಣ ಗೋಧಿ ಇದಕ್ಕೆ ಹೆಚ್ಚು ಹತ್ತಿರ — ಈ ಹೋಲಿಕೆ ಸಂಸ್ಕರಿಸಿದ ಧಾನ್ಯಗಳೊಂದಿಗೆ. ಮೂಲ: IFCT 2017 / USDA."
   disclaimer:
     en: Millets are a nutritious whole grain that supports a balanced diet — not a cure for any disease. Consult a doctor before changing your diet for a medical condition.
-    kn: ಸಿರಿಧಾನ್ಯ ಸಮತೋಲಿತ ಆಹಾರಕ್ಕೆ ಪೂರಕ — ರೋಗಪರಿಹಾರವಲ್ಲ. ವೈದ್ಯರನ್ನು ಸಂಪರ್ಕಿಸಿ.
+    kn: ಸಿರಿಧಾನ್ಯಗಳು ಸಮತೋಲಿತ ಆಹಾರಕ್ಕೆ ಪೂರಕವಾದ ಪೌಷ್ಟಿಕ ಧಾನ್ಯಗಳು — ಯಾವುದೇ ರೋಗಕ್ಕೆ ಚಿಕಿತ್ಸೆಯಲ್ಲ. ಆರೋಗ್ಯ ಸಮಸ್ಯೆಗಾಗಿ ಆಹಾರ ಬದಲಿಸುವ ಮೊದಲು ವೈದ್ಯರನ್ನು ಸಂಪರ್ಕಿಸಿ.
 siridhanya:
   eyebrow:
     en: The five siridhanya
     kn: ಪಂಚ ಸಿರಿಧಾನ್ಯ
   heading:
     en: "Five *positive* millets."
-    kn: "ಐದು *ಧನಾತ್ಮಕ* ಸಿರಿಧಾನ್ಯ."
+    kn: "ಐದು *ಧನಾತ್ಮಕ* ಸಿರಿಧಾನ್ಯಗಳು."
   stats:
     - value: 6×
       label:
@@ -153,37 +153,37 @@ siridhanya:
     - value: "54"
       label:
         en: GI (foxtail) — low, vs ~72 rice
-        kn: ಜಿಐ (ನವಣೆ) — ಕಡಿಮೆ, ಅಕ್ಕಿ ~೭೨
+        kn: ಗ್ಲೈಸೆಮಿಕ್ ಸೂಚ್ಯಂಕ (ನವಣೆ) — ಕಡಿಮೆ; ಅಕ್ಕಿಯದು ~72
     - value: 3×
       label:
         en: the magnesium of refined wheat
-        kn: ಗೋಧಿಗಿಂತ ಹೆಚ್ಚು ಮೆಗ್ನೀಸಿಯಂ
+        kn: ಮೈದಾಗಿಂತ ಹೆಚ್ಚು ಮೆಗ್ನೀಸಿಯಂ
   cta:
     en: Learn about millets
-    kn: ಸಿರಿಧಾನ್ಯ ಬಗ್ಗೆ
+    kn: ಸಿರಿಧಾನ್ಯಗಳ ಬಗ್ಗೆ ತಿಳಿಯಿರಿ
 environment:
   eyebrow:
     en: Kind to the earth
     kn: ಭೂಮಿಗೆ ಒಳಿತು
   heading:
     en: Ancient grains for a warming world.
-    kn: ಬಿಸಿಯಾಗುತ್ತಿರುವ ಜಗತ್ತಿಗೆ ಪುರಾತನ ಧಾನ್ಯ.
+    kn: ಬಿಸಿಯಾಗುತ್ತಿರುವ ಜಗತ್ತಿಗೆ ಪುರಾತನ ಧಾನ್ಯಗಳು.
   body:
     en: Millets are C4 grasses — more grain from less water, grown on the rain alone, ripe in weeks.
-    kn: ಸಿರಿಧಾನ್ಯ ಸಿ4 ಹುಲ್ಲುಗಳು — ಕಡಿಮೆ ನೀರಿನಲ್ಲಿ ಹೆಚ್ಚು ಧಾನ್ಯ, ಮಳೆಯಿಂದಲೇ ಬೆಳೆಯುತ್ತವೆ.
+    kn: ಸಿರಿಧಾನ್ಯಗಳು C4 ಹುಲ್ಲು ಸಸ್ಯಗಳು — ಕಡಿಮೆ ನೀರಿನಲ್ಲಿ ಹೆಚ್ಚು ಇಳುವರಿ, ಮಳೆಯಿಂದಲೇ ಬೆಳೆಯುತ್ತವೆ, ಕೆಲವೇ ವಾರಗಳಲ್ಲಿ ಕೊಯ್ಲಿಗೆ ಬರುತ್ತವೆ.
   stats:
     - value: 5×
       label:
         en: less water/kg than rice (up to)
-        kn: ಅಕ್ಕಿಗಿಂತ ಕಡಿಮೆ ನೀರು (ವರೆಗೆ)
+        kn: ವರೆಗೆ ಕಡಿಮೆ ನೀರು (ಪ್ರತಿ ಕೆಜಿಗೆ, ಅಕ್ಕಿಗೆ ಹೋಲಿಸಿದರೆ)
     - value: 200–300
       label:
         en: mm rainfall — rice needs 1200–2000
-        kn: ಮಿಮೀ ಮಳೆ — ಅಕ್ಕಿಗೆ ೧೨೦೦–೨೦೦೦
+        kn: ಮಿ.ಮೀ. ಮಳೆ ಸಾಕು — ಭತ್ತಕ್ಕೆ 1200–2000 ಮಿ.ಮೀ. ಬೇಕು
     - value: 45–90
       label:
         en: days, rainfed to harvest
-        kn: ದಿನ, ಮಳೆಯಾಶ್ರಿತ ಕೊಯ್ಲು
+        kn: ದಿನಗಳಲ್ಲಿ ಕೊಯ್ಲು — ಮಳೆಯಾಶ್ರಿತ ಬೆಳೆ
 story:
   eyebrow:
     en: The millet revolution
@@ -193,7 +193,7 @@ story:
     kn: ಮನೆಗೆ ಮರಳಿದ ಧಾನ್ಯ.
   body:
     en: "Dr. Khadar Vali — the “Millet Man of India,” a Mysuru food scientist and Padma Shri awardee — revived five near-extinct millets he calls siridhanya. His message is simple: return to traditional grains, grown without chemicals, as part of a balanced life."
-    kn: "ಡಾ. ಖಾದರ್ ವಲಿ — “ಭಾರತದ ಸಿರಿಧಾನ್ಯ ಪುರುಷ,” ಮೈಸೂರಿನ ಆಹಾರ ವಿಜ್ಞಾನಿ, ಪದ್ಮಶ್ರೀ — ಐದು ಸಿರಿಧಾನ್ಯಗಳನ್ನು ಪುನರುಜ್ಜೀವನಗೊಳಿಸಿದರು. ಸಂದೇಶ ಸರಳ: ರಾಸಾಯನಿಕ ಇಲ್ಲದ ಸಾಂಪ್ರದಾಯಿಕ ಧಾನ್ಯಗಳಿಗೆ ಮರಳಿ."
+    kn: "“ಮಿಲೆಟ್ ಮ್ಯಾನ್ ಆಫ್ ಇಂಡಿಯಾ” ಎಂದೇ ಹೆಸರಾದ ಮೈಸೂರಿನ ಆಹಾರ ವಿಜ್ಞಾನಿ, ಪದ್ಮಶ್ರೀ ಪುರಸ್ಕೃತ ಡಾ. ಖಾದರ್ ವಲಿ ಅವರು ಅಳಿವಿನಂಚಿನಲ್ಲಿದ್ದ ಐದು ಸಿರಿಧಾನ್ಯಗಳಿಗೆ ಮರುಜೀವ ನೀಡಿದರು. ಅವರ ಸಂದೇಶ ಸರಳ: ರಾಸಾಯನಿಕವಿಲ್ಲದೆ ಬೆಳೆದ ಸಾಂಪ್ರದಾಯಿಕ ಧಾನ್ಯಗಳಿಗೆ ಮರಳಿ, ಸಮತೋಲಿತ ಜೀವನದ ಭಾಗವಾಗಿ."
   image: /media/millet-grains-raw.jpg
   imageAlt: A ripe millet head on the plant, in a green field
 menuPreview:
@@ -208,27 +208,27 @@ menuPreview:
       imageAlt: A crisp dosa with chutneys and sambar on a cane stool
       caption:
         en: Dosa & tiffins
-        kn: ದೋಸೆ, ತಿಂಡಿ
+        kn: ದೋಸೆ ಮತ್ತು ತಿಂಡಿ
       category: tiffins
     - image: /media/south-indian-thali.jpg
       imageAlt: A steel thali with curries, rotis and papad, seen from above
       caption:
         en: Meals & bowls
-        kn: ಊಟ, ಬೌಲ್
+        kn: ಊಟ ಮತ್ತು ಬೌಲ್
       category: meals
     - image: /media/thali-wooden-table.jpg
       imageAlt: A steel thali with papad and curries on a wooden table
       caption:
         en: Sweets & drinks
-        kn: ಸಿಹಿ, ಪಾನೀಯ
+        kn: ಸಿಹಿ ಮತ್ತು ಪಾನೀಯ
       category: sweets-drinks
   cta:
     en: See the full menu
-    kn: ಪೂರ್ಣ ಮೆನು
+    kn: ಪೂರ್ಣ ಮೆನು ನೋಡಿ
 visit:
   eyebrow:
     en: Visit us
-    kn: ಭೇಟಿ ಮಾಡಿ
+    kn: ಭೇಟಿ ನೀಡಿ
   mapLabel:
     en: Open in Maps
     kn: ನಕ್ಷೆಯಲ್ಲಿ ತೆರೆಯಿರಿ

@@ -8,7 +8,7 @@ export function NotFoundContent() {
         <p className="eyebrow">
           <span className="en">Error 404</span>
           <span className="kn" lang="kn">
-            ದೋಷ ೪೦೪
+            ದೋಷ 404
           </span>
         </p>
         <h1>

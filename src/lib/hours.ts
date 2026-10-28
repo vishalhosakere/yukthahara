@@ -1,4 +1,4 @@
-import { knDigits, type Bi } from "./i18n";
+import type { Bi } from "./i18n";
 import type { Settings } from "./content";
 
 const WEEK = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"] as const;
@@ -44,12 +44,12 @@ const formatTimeEn = (time: string) => {
   return `${hour12}${m ? `:${String(m).padStart(2, "0")}` : ""}${h < 12 ? "am" : "pm"}`;
 };
 
-/** Kannada clocks name the part of the day: ಬೆ (morning), ಮ (afternoon), ಸಂ (evening), ರಾ (night). */
+/** Kannada times name the part of the day in full: ಬೆಳಿಗ್ಗೆ 8 – ರಾತ್ರಿ 10. Western digits match prices elsewhere on the site. */
 const formatTimeKn = (time: string) => {
   const { h, m } = parse(time);
-  const period = h >= 4 && h < 12 ? "ಬೆ" : h >= 12 && h < 16 ? "ಮ" : h >= 16 && h < 20 ? "ಸಂ" : "ರಾ";
+  const period = h >= 4 && h < 12 ? "ಬೆಳಿಗ್ಗೆ" : h >= 12 && h < 16 ? "ಮಧ್ಯಾಹ್ನ" : h >= 16 && h < 20 ? "ಸಂಜೆ" : "ರಾತ್ರಿ";
   const hour12 = h % 12 || 12;
-  return `${period} ${knDigits(`${hour12}${m ? `:${String(m).padStart(2, "0")}` : ""}`)}`;
+  return `${period} ${hour12}${m ? `:${String(m).padStart(2, "0")}` : ""}`;
 };
 
 export function hoursLines(hours: Hours): Bi[] {
