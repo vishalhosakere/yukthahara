@@ -1,4 +1,28 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
 .DS_Store
+*.pem
 *.log
 build.log
 archive/
+
+# env files: only the template and the dev-only opt-in are committed
+.env*
+!.env.example
+!.env.development
+
+# netlify
+.netlify
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

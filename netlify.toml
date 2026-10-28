@@ -1,10 +1,19 @@
-# Static site — no build step. Netlify serves the repo root directly.
+# Next.js 16 build. Netlify detects Next.js and runs it with its Next.js runtime (no plugin to install).
 [build]
-  publish = "."
-  command = ""
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "24"
 
 [[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Internal design tools: reachable by URL, never indexed.
+[[headers]]
+  for = "/lab/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
