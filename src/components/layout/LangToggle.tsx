@@ -1,6 +1,6 @@
 "use client";
 
-const STORAGE_KEY = "yh-lang";
+import { LANG_STORAGE_KEY as STORAGE_KEY } from "@/lib/lang-boot";
 
 function toggleLanguage() {
   const root = document.documentElement;
@@ -26,6 +26,3 @@ export function LangToggle({ className = "lang" }: { className?: string }) {
     </button>
   );
 }
-
-/** Runs before first paint so a saved (or ?lang=kn) choice never flashes English first. */
-export const LANG_BOOT = `(function(){var d=document.documentElement;d.classList.add('js');try{var q=new URLSearchParams(location.search).get('lang');var l=(q==='kn'||q==='en')?q:localStorage.getItem('${STORAGE_KEY}');if(l==='kn'){d.dataset.lang='kn';d.lang='kn'}}catch(e){}})()`;

@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
+import { STRIP_NETLIFY_HEAD } from "@/lib/netlify-head";
 import type { ReactNode } from "react";
 import "../globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { Header, type NavLink } from "@/components/layout/Header";
-import { LANG_BOOT } from "@/components/layout/LangToggle";
+import { LANG_BOOT } from "@/lib/lang-boot";
 import { getSettings, getUi } from "@/lib/content";
 import { fontVariables } from "@/lib/fonts";
 import { hoursLines } from "@/lib/hours";
@@ -40,7 +41,7 @@ export default async function SiteLayout({ children }: { children: ReactNode }) 
   return (
     <html lang="en-IN" data-lang="en" className={fontVariables} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: LANG_BOOT }} />
+        <script dangerouslySetInnerHTML={{ __html: `${STRIP_NETLIFY_HEAD};${LANG_BOOT}` }} />
       </head>
       <body>
         <a href="#main" className="skip-link">

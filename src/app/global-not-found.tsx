@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { STRIP_NETLIFY_HEAD } from "@/lib/netlify-head";
 import "./globals.css";
-import { LANG_BOOT } from "@/components/layout/LangToggle";
+import { LANG_BOOT } from "@/lib/lang-boot";
 import { NotFoundContent } from "@/components/layout/NotFoundContent";
 import { fontVariables } from "@/lib/fonts";
 
@@ -13,7 +14,7 @@ export default function GlobalNotFound() {
   return (
     <html lang="en-IN" data-lang="en" className={fontVariables} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: LANG_BOOT }} />
+        <script dangerouslySetInnerHTML={{ __html: `${STRIP_NETLIFY_HEAD};${LANG_BOOT}` }} />
       </head>
       <body>
         <main id="main">
