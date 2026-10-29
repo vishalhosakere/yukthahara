@@ -4,8 +4,11 @@ import { useEffect, useRef, useState } from "react";
 
 type NetworkInformation = { saveData?: boolean; effectiveType?: string };
 
-/** Starts after the page has loaded and the browser is idle; skipped on data-saver, slow networks and reduced motion. */
-export function HeroVideo({ src, poster }: { src: string; poster: string }) {
+/**
+ * Starts after the page has loaded and the browser is idle; skipped on data-saver, slow networks and reduced motion. The
+ * hero photo underneath stands in until it plays (and instead of it), so the video needs no poster of its own.
+ */
+export function HeroVideo({ src }: { src: string }) {
   const ref = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
 
@@ -52,7 +55,6 @@ export function HeroVideo({ src, poster }: { src: string; poster: string }) {
       className="hero-video"
       data-playing={playing}
       onPlaying={() => setPlaying(true)}
-      poster={poster}
       muted
       loop
       playsInline

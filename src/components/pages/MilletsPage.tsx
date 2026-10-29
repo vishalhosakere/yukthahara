@@ -1,31 +1,35 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { SPLIT_IMAGE_SIZES } from "@/components/home/Story";
 import { MilletTable } from "@/components/millets/MilletTable";
+import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { rich, T } from "@/components/ui/T";
 import { getMillets, getMilletsPage, getSettings } from "@/lib/content";
+import { localePath, localize, pick, type Lang } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
-import { Reveal } from "@/components/ui/Reveal";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function milletsMetadata(lang: Lang) {
   const [settings, page] = await Promise.all([getSettings(), getMilletsPage()]);
   return pageMetadata({
-    title: page.title.en.replace(/\.$/, ""),
-    description: `${page.intro.en} Protein, fibre, iron and glycemic index of the five siridhanya millets, with sources.`,
+    lang,
     path: "/millets",
-    siteName: settings.name.en,
+    title: pick(page.title, lang).text.replace(/\.$/, ""),
+    description: `${pick(page.intro, lang).text} ${pick(page.tableHeading, lang).text}.`,
+    siteName: pick(settings.name, lang).text,
+    share: { page: "millets", alt: `${settings.name.en}: ${page.title.en}` },
   });
 }
 
-export default async function MilletsPage() {
-  const [page, millets] = await Promise.all([getMilletsPage(), getMillets()]);
+export async function MilletsPage({ lang }: { lang: Lang }) {
+  const [rawPage, millets] = await Promise.all([getMilletsPage(), getMillets()]);
+  const page = localize(rawPage, lang);
   const { honesty, environment, sources } = page;
   return (
     <>
-      <section className="section pagehead">
+      <section className="section pagehead" aria-labelledby="millets-page-title">
         <div className="wrap">
-          <SectionHead as="h1" eyebrow={page.eyebrow} heading={page.title}>
+          <SectionHead as="h1" eyebrow={page.eyebrow} heading={page.title} id="millets-page-title">
             <p className="lead muted">
               <T v={page.intro} />
             </p>
@@ -33,24 +37,24 @@ export default async function MilletsPage() {
         </div>
       </section>
 
-      <Reveal className="section">
+      <Reveal className="section" labelledBy="millets-table-title">
         <div className="wrap">
-          <h2>
+          <h2 id="millets-table-title">
             <T v={page.tableHeading} />
           </h2>
-          <MilletTable millets={millets} columns={page.columns} />
+          <MilletTable millets={millets} columns={page.columns} lang={lang} />
           <p className="note">
             <T v={page.tableNote} />
           </p>
         </div>
       </Reveal>
 
-      <Reveal className="section">
+      <Reveal className="section" labelledBy="honesty-title">
         <div className="wrap">
           <div className="split">
             <div>
               <div className="rule" aria-hidden="true" />
-              <h2>
+              <h2 id="honesty-title">
                 <T v={honesty.heading} />
               </h2>
               {honesty.points.map((point, i) => (
@@ -64,7 +68,7 @@ export default async function MilletsPage() {
             </div>
             {honesty.image && (
               <figure className="figure">
-                <Image src={honesty.image} alt={honesty.imageAlt} fill sizes="(min-width: 820px) 45vw, 100vw" />
+                <Image src={honesty.image} alt={honesty.imageAlt.text} fill sizes={SPLIT_IMAGE_SIZES} />
               </figure>
             )}
           </div>
@@ -74,9 +78,9 @@ export default async function MilletsPage() {
         </div>
       </Reveal>
 
-      <Reveal className="section band">
+      <Reveal className="section band" labelledBy="planet-title">
         <div className="wrap">
-          <SectionHead eyebrow={environment.eyebrow} heading={environment.heading}>
+          <SectionHead eyebrow={environment.eyebrow} heading={environment.heading} id="planet-title">
             <p className="lead">
               <T v={environment.body} />
             </p>
@@ -87,18 +91,21 @@ export default async function MilletsPage() {
         </div>
       </Reveal>
 
-      <Reveal className="section">
+      <Reveal className="section" labelledBy="sources-title">
         <div className="wrap">
           <div className="rule" aria-hidden="true" />
-          <p className="eyebrow">
+          <h2 className="eyebrow" id="sources-title">
             <T v={sources.eyebrow} />
+          </h2>
+          {/* The sources are titles of papers and tables: one list, the same on both pages. */}
+          <p className="note sources" lang="en">
+            {rich(sources.body, "i")}
           </p>
-          <p className="note sources">{rich(sources.body, "i")}</p>
           <div className="cta">
-            <Link className="btn btn--primary" href="/menu">
+            <Link className="btn btn--primary" href={localePath("/menu", lang)}>
               <T v={page.ctaMenu} />
             </Link>
-            <Link className="btn" href="/">
+            <Link className="btn" href={localePath("/", lang)}>
               <T v={page.ctaHome} />
             </Link>
           </div>

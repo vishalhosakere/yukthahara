@@ -1,20 +1,20 @@
 import { Anek_Kannada, Archivo, Bricolage_Grotesque, Space_Mono } from "next/font/google";
 
-export const display = Bricolage_Grotesque({
+const display = Bricolage_Grotesque({
   subsets: ["latin"],
   axes: ["opsz"],
   variable: "--font-bricolage",
   display: "swap",
 });
 
-export const body = Archivo({
+const body = Archivo({
   subsets: ["latin"],
   variable: "--font-archivo",
   display: "swap",
 });
 
-// Small labels only; not worth a preload on the critical path.
-export const mono = Space_Mono({
+// Labels and the hero eyebrow: small text that swaps in harmlessly, so it stays off the preload list.
+const mono = Space_Mono({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-space-mono",
@@ -22,8 +22,11 @@ export const mono = Space_Mono({
   preload: false,
 });
 
-// Downloaded only when Kannada text is actually displayed.
-export const kannada = Anek_Kannada({
+/**
+ * Fetched when Kannada text is on screen. Not preloaded even for Kannada pages: next/font's preloads apply site-wide,
+ * and English readers shouldn't download a script they never see. It swaps in within the first paint or two.
+ */
+const kannada = Anek_Kannada({
   subsets: ["kannada"],
   variable: "--font-anek",
   display: "swap",

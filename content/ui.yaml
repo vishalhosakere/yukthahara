@@ -33,3 +33,57 @@ labels:
   directions:
     en: Get directions
     kn: ದಾರಿ ತಿಳಿಯಿರಿ
+  follow:
+    en: Find us online
+    kn: ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ನಾವು
+status:
+  open:
+    en: Open now
+    kn: ಈಗ ತೆರೆದಿದೆ
+  closed:
+    en: Closed now
+    kn: ಈಗ ಮುಚ್ಚಿದೆ
+  until:
+    en: until {time}
+    kn: '{time}ರವರೆಗೆ'
+  opensToday:
+    en: opens {time}
+    kn: '{time}ಕ್ಕೆ ತೆರೆಯುತ್ತದೆ'
+  opensOn:
+    en: opens {day} {time}
+    kn: '{day} {time}ಕ್ಕೆ ತೆರೆಯುತ್ತದೆ'
+a11y:
+  skipLink:
+    en: Skip to content
+    kn: ಮುಖ್ಯ ವಿಷಯಕ್ಕೆ ತೆರಳಿ
+  mainNav:
+    en: Main
+    kn: ಮುಖ್ಯ
+  openMenu:
+    en: Open navigation
+    kn: ಪುಟಗಳ ಪಟ್ಟಿ ತೆರೆಯಿರಿ
+  closeMenu:
+    en: Close navigation
+    kn: ಪುಟಗಳ ಪಟ್ಟಿ ಮುಚ್ಚಿರಿ
+  menuSections:
+    en: Menu sections
+    kn: ಮೆನು ವಿಭಾಗಗಳು
+  newTab:
+    en: opens in a new tab
+    kn: ಹೊಸ ಟ್ಯಾಬ್‌ನಲ್ಲಿ ತೆರೆಯುತ್ತದೆ
+  home:
+    en: home page
+    kn: ಮುಖಪುಟ
+notFound:
+  eyebrow:
+    en: Error 404
+    kn: ದೋಷ 404
+  heading:
+    en: This page *isn't on the menu.*
+    kn: ಈ ಪುಟ *ಸಿಗಲಿಲ್ಲ.*
+  home:
+    en: Back home
+    kn: ಮುಖಪುಟಕ್ಕೆ
+  menu:
+    en: See the menu
+    kn: ಮೆನು ನೋಡಿ

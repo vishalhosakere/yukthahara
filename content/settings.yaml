@@ -4,17 +4,23 @@ name:
 tagline:
   en: Eat right, eat millets.
   kn: ಸರಿಯಾಗಿ ತಿನ್ನಿ, ಸಿರಿಧಾನ್ಯ ತಿನ್ನಿ.
-seoTitle: yuktaahara · millet kitchen, Mysore
-seoDescription: >-
-  Yuktaahara is a millet (siridhanya) kitchen in Kuvempunagar, Mysore: tiffins, meals and sweets cooked from the five
-  positive millets in wood-pressed oil, iron and clay. Eat right, eat millets.
-phone: +91 00000 00000
+seoTitle:
+  en: yuktaahara · millet kitchen in Mysuru
+  kn: ಯುಕ್ತಾಹಾರ · ಮೈಸೂರಿನ ಸಿರಿಧಾನ್ಯ ಅಡುಗೆಮನೆ
+seoDescription:
+  en: >-
+    A millet (siridhanya) kitchen in Kuvempunagar, Mysuru: tiffins, meals and sweets cooked from the five positive
+    millets in wood-pressed oil, iron and clay.
+  kn: >-
+    ಮೈಸೂರಿನ ಕುವೆಂಪುನಗರದ ಸಿರಿಧಾನ್ಯ ಅಡುಗೆಮನೆ: ಪಂಚ ಸಿರಿಧಾನ್ಯಗಳಿಂದ, ಗಾಣದ ಎಣ್ಣೆಯಲ್ಲಿ, ಕಬ್ಬಿಣ ಮತ್ತು ಮಣ್ಣಿನ ಪಾತ್ರೆಗಳಲ್ಲಿ
+    ತಯಾರಿಸಿದ ತಿಂಡಿ, ಊಟ ಮತ್ತು ಸಿಹಿ.
+phone: ''
 address:
   street:
     en: Kuvempunagar
     kn: ಕುವೆಂಪುನಗರ
   city:
-    en: Mysore
+    en: Mysuru
     kn: ಮೈಸೂರು
   postalCode: '570023'
   region: Karnataka
@@ -34,3 +40,4 @@ servesCuisine:
   - Karnataka
   - Millet-based
   - Vegetarian
+social: []

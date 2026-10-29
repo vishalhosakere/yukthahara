@@ -26,8 +26,19 @@ function bi(label: string, opts: { multiline?: boolean; description?: string; re
   );
 }
 
-const image = (label: string, description?: string) =>
-  fields.image({ label, description, directory: "public/media", publicPath: "/media/" });
+/**
+ * Keystatic renames an uploaded file after its field on every save (hero/image.jpg, story/image.jpg, ...) and deletes the
+ * entry's old files, so each singleton keeps its media in its own folder and never shares a file with another entry.
+ */
+const mediaIn = (folder: string) => ({ directory: `public/media/${folder}`, publicPath: `/media/${folder}/` });
+const HOME_MEDIA = mediaIn("home");
+const MILLETS_MEDIA = mediaIn("millets-page");
+
+const image = (media: { directory: string; publicPath: string }, label: string, description?: string) =>
+  fields.image({ label, description, ...media });
+
+const alt = (label = "Photo description (for screen readers)") =>
+  bi(label, { description: "What the photo shows, in a sentence. Leave empty only if the photo is purely decorative." });
 
 const stat = () =>
   fields.object(
@@ -78,9 +89,12 @@ export default config({
       schema: {
         name: bi("Restaurant name", { required: true }),
         tagline: bi("Tagline"),
-        seoTitle: fields.text({ label: "Search result title (English)", validation: { isRequired: true } }),
-        seoDescription: fields.text({ label: "Search result description (English)", multiline: true }),
-        phone: fields.text({ label: "Phone number", description: "As it should appear, e.g. +91 98450 12345. Used for the Call buttons." }),
+        seoTitle: bi("Search result title", { required: true, description: "Shown as the page title in Google and browser tabs." }),
+        seoDescription: bi("Search result description", { multiline: true, description: "One or two sentences, under 160 characters." }),
+        phone: fields.text({
+          label: "Phone number",
+          description: "As it should appear, e.g. +91 98450 12345. The Call buttons only appear once this is filled in.",
+        }),
         address: fields.object(
           {
             street: bi("Street / area"),
@@ -111,6 +125,16 @@ export default config({
           label: "Cuisine types (for Google)",
           itemLabel: (p) => p.value,
         }),
+        social: fields.array(
+          fields.object(
+            {
+              label: fields.text({ label: "Name", description: "e.g. Instagram, Google Maps reviews, Swiggy" }),
+              url: fields.url({ label: "Link", validation: { isRequired: true } }),
+            },
+            { layout: [4, 8] },
+          ),
+          { label: "Profiles & ordering links", description: "Optional. Shown in the footer and given to Google.", itemLabel: (p) => p.fields.label.value },
+        ),
       },
     }),
     ui: singleton({
@@ -135,8 +159,40 @@ export default config({
             hours: bi("Hours"),
             call: bi("Call button"),
             directions: bi("Directions button"),
+            follow: bi("Footer: profiles & ordering links"),
           },
           { label: "Labels" },
+        ),
+        status: fields.object(
+          {
+            open: bi("Open now", { description: "e.g. Open now" }),
+            closed: bi("Closed now", { description: "e.g. Closed" }),
+            until: bi("Closing time", { description: "{time} is replaced, e.g. until {time}" }),
+            opensToday: bi("Opening later today", { description: "{time} is replaced, e.g. opens {time}" }),
+            opensOn: bi("Opening on another day", { description: "{day} and {time} are replaced, e.g. opens {day} {time}" }),
+          },
+          { label: "Open / closed status", description: "Worked out from the opening hours, in Mysuru time." },
+        ),
+        a11y: fields.object(
+          {
+            skipLink: bi("Skip to content link"),
+            mainNav: bi("Main navigation name"),
+            openMenu: bi("Open the menu (phones)"),
+            closeMenu: bi("Close the menu (phones)"),
+            menuSections: bi("Menu page: section links name"),
+            newTab: bi("Opens in a new tab"),
+            home: bi("Logo link: home page"),
+          },
+          { label: "Screen reader labels", description: "Read aloud by screen readers; not shown on screen." },
+        ),
+        notFound: fields.object(
+          {
+            eyebrow: bi("Small label"),
+            heading: bi("Heading", { multiline: true, description: HIGHLIGHT_HELP }),
+            home: bi("Home button"),
+            menu: bi("Menu button"),
+          },
+          { label: "Page not found (404)" },
         ),
       },
     }),
@@ -151,13 +207,12 @@ export default config({
             intro: bi("Intro", { multiline: true, description: "Wrap words in *asterisks* to highlight them." }),
             primaryCta: bi("Menu button"),
             secondaryCta: bi("Visit button"),
-            image: image("Hero photo", "Portrait photos crop well on phones. Also used as the video's poster."),
-            imageAlt: fields.text({ label: "Hero photo description (for screen readers)" }),
+            image: image(HOME_MEDIA, "Hero photo", "Portrait photos crop well on phones. Shown while the video loads, and instead of it."),
+            imageAlt: alt("Hero photo description (for screen readers)"),
             video: fields.file({
               label: "Background video (optional)",
-              description: "Short, silent MP4 under 3 MB. Loads only after the page, never on data-saver or reduced-motion. The included clip is a stock wheat field: swap in a millet clip before switching it on.",
-              directory: "public/media",
-              publicPath: "/media/",
+              description: "Short, silent MP4 under 3 MB. Loads only after the page, never on data-saver or reduced-motion.",
+              ...HOME_MEDIA,
             }),
             playVideo: fields.checkbox({ label: "Play the background video", defaultValue: false }),
           },
@@ -224,26 +279,31 @@ export default config({
           {
             ...section,
             body: bi("Story", { multiline: true }),
-            image: image("Photo"),
-            imageAlt: fields.text({ label: "Photo description (for screen readers)" }),
+            image: image(HOME_MEDIA, "Photo"),
+            imageAlt: alt(),
           },
           { label: "Story" },
         ),
         menuPreview: fields.object(
           {
             ...section,
-            tiles: fields.array(
-              fields.object({
-                image: image("Photo"),
-                imageAlt: fields.text({ label: "Photo description (for screen readers)" }),
-                caption: bi("Caption"),
-                category: fields.relationship({ label: "Opens this menu section", collection: "menuCategories" }),
-              }),
-              { label: "Photo tiles", itemLabel: (p) => p.fields.caption.fields.en.value },
-            ),
+            more: bi("Link to a menu section", { description: "{count} is replaced with the number of dishes, e.g. All {count} dishes" }),
             cta: bi("Button"),
           },
-          { label: "Menu preview" },
+          {
+            label: "Menu at a glance",
+            description: "Each menu section with its dishes marked 'Show on the home page' (or its first three), photo optional.",
+          },
+        ),
+        faq: fields.object(
+          {
+            ...section,
+            items: fields.array(fields.object({ question: bi("Question"), answer: bi("Answer", { multiline: true }) }), {
+              label: "Questions",
+              itemLabel: (p) => p.fields.question.fields.en.value,
+            }),
+          },
+          { label: "Questions & answers" },
         ),
         visit: fields.object({ eyebrow: bi("Small label"), mapLabel: bi("Map card label") }, { label: "Visit" }),
       },
@@ -278,8 +338,8 @@ export default config({
               label: "Points",
               itemLabel: (p) => p.fields.lead.fields.en.value,
             }),
-            image: image("Photo"),
-            imageAlt: fields.text({ label: "Photo description (for screen readers)" }),
+            image: image(MILLETS_MEDIA, "Photo"),
+            imageAlt: alt(),
           },
           { label: "What millets can and can't do" },
         ),
@@ -310,12 +370,20 @@ export default config({
         }),
         order: fields.integer({ label: "Position on the menu", defaultValue: 0 }),
         title: bi("Section heading", { required: true }),
+        photo: fields.image({
+          label: "Photo (optional)",
+          description: "A photo of dishes from this section, shown on the home page. Use your own food photos.",
+          directory: "public/media/menu",
+          publicPath: "/media/menu/",
+        }),
+        photoAlt: alt(),
         items: fields.array(
           fields.object({
             name: bi("Dish", { required: true }),
             description: bi("Description", { multiline: true }),
             price: fields.integer({ label: "Price (₹)", validation: { isRequired: true, min: 0 } }),
             tags: fields.multiRelationship({ label: "Tags", collection: "tags" }),
+            featured: fields.checkbox({ label: "Show on the home page", defaultValue: false }),
           }),
           {
             label: "Dishes",
@@ -332,6 +400,17 @@ export default config({
       schema: {
         key: fields.slug({ name: { label: "Tag (for this list)" } }),
         label: bi("Label on the menu", { required: true }),
+        diet: fields.select({
+          label: "Diet (for Google)",
+          description: "Dishes with this tag are listed under this diet in Google's menu data.",
+          options: [
+            { label: "None", value: "none" },
+            { label: "Vegan", value: "VeganDiet" },
+            { label: "Vegetarian", value: "VegetarianDiet" },
+            { label: "Gluten-free", value: "GlutenFreeDiet" },
+          ],
+          defaultValue: "none",
+        }),
       },
     }),
     millets: collection({

@@ -1,15 +1,86 @@
-@import "tailwindcss";
-
 /* Yuktaahara: warm brutalist. Ivory/forest palette, terracotta accent, Bricolage Grotesque display, Archivo body,
    Space Mono labels, Anek Kannada. Heavy 3px forest borders, hard offset shadows, uppercase, no radius.
-   Written mobile-first (390px), scaling up at 640 / 768 / 900 / 1024px. */
+   Written mobile-first (390px), scaling up at 640 / 768 / 820 / 900 / 1024px. */
+
+@layer reset, base, components;
+
+/* ---------- reset ---------- */
+@layer reset {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    interpolate-size: allow-keywords;
+  }
+  ol,
+  ul,
+  menu {
+    list-style: none;
+  }
+  img,
+  svg,
+  video,
+  canvas,
+  iframe {
+    display: block;
+    vertical-align: middle;
+  }
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  button,
+  summary {
+    cursor: pointer;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
 
 :root {
   --ivory: #f3ecda;
   --paper: #faf6ec;
   --forest: #253d2a;
   --deep: #16281a;
-  --olive: #6e7150;
   --walnut: #5b4636;
   --accent: #a6552e;
   --stone: #c9bea9;
@@ -31,18 +102,18 @@
   --wrap: 1100px;
   --pad: clamp(20px, 5.5vw, 84px);
   --nav-h: 60px;
+  /* The header once it turns solid (it slims down on desktop): what sticky bars tuck under. */
+  --nav-solid: 60px;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* Focus rings: terracotta on light paper, ochre on the dark surfaces (3:1 or better on each). */
+  --focus: var(--accent);
 }
 
-@theme inline {
-  --color-ivory: var(--ivory);
-  --color-paper: var(--paper);
-  --color-forest: var(--forest);
-  --color-deep: var(--deep);
-  --color-walnut: var(--walnut);
-  --color-accent: var(--accent);
-  --font-display: var(--display);
-  --font-body: var(--body);
-  --font-mono: var(--mono);
+.band,
+.mobile-menu,
+.site-footer,
+.site-nav[data-solid="false"] {
+  --focus: var(--ochre);
 }
 
 /* ---------- base ---------- */
@@ -65,7 +136,7 @@
     text-rendering: optimizeLegibility;
   }
   :focus-visible {
-    outline: 3px solid var(--accent);
+    outline: 3px solid var(--focus);
     outline-offset: 2px;
   }
   mark {
@@ -103,11 +174,7 @@
     font-weight: 700;
   }
 
-  /* Bilingual: both languages are in the HTML; only the active one is shown. */
-  html[data-lang="en"] .kn,
-  html[data-lang="kn"] .en {
-    display: none !important;
-  }
+  /* Kannada runs (all of a Kannada page's copy, and the odd Kannada word on English pages) get their own face. */
   .kn {
     font-family: var(--kn);
     letter-spacing: 0.01em;
@@ -571,7 +638,7 @@
     inset: 0;
     z-index: -1;
     background:
-      linear-gradient(180deg, rgba(22, 40, 26, 0.5) 0, rgba(22, 40, 26, 0) 120px),
+      linear-gradient(180deg, rgba(22, 40, 26, 0.66) 0, rgba(22, 40, 26, 0) 140px),
       linear-gradient(0deg, var(--ivory) 16%, rgba(243, 236, 218, 0.86) 42%, rgba(243, 236, 218, 0) 70%);
   }
   .hero-copy {
@@ -960,60 +1027,190 @@
     object-fit: cover;
   }
 
-  /* ---------- menu preview tiles: a swipeable rail on phones ---------- */
-  .tiles {
+  /* ---------- menu at a glance (home, on the forest band) ---------- */
+  .glance {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 78%;
-    gap: 16px;
-    margin: 32px calc(-1 * var(--pad)) 0;
-    padding: 0 var(--pad) 12px;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
-    scroll-padding-inline: var(--pad);
-    scrollbar-width: none;
+    gap: 22px;
+    margin-top: 32px;
   }
-  .tiles::-webkit-scrollbar {
-    display: none;
+  .glance-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    color: var(--forest);
+    border: var(--edge) solid var(--deep);
+    box-shadow: 6px 6px 0 var(--deep);
   }
-  .tiles > li {
-    scroll-snap-align: start;
-    padding: 0 6px 6px 0;
-  }
-  .tile {
+  .glance-photo {
     position: relative;
-    display: block;
+    aspect-ratio: 16 / 10;
     overflow: hidden;
-    aspect-ratio: 4 / 5;
     background: var(--stone);
-    border: var(--edge) solid var(--forest);
-    box-shadow: var(--hard);
-    transition:
-      transform 0.15s,
-      box-shadow 0.15s;
+    border-bottom: var(--edge) solid var(--deep);
   }
-  .tile img {
+  .glance-photo img {
     object-fit: cover;
-    transition: transform 0.5s;
   }
-  .tile:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 8px 8px 0 var(--forest);
+  .band .glance-card h3 {
+    margin: 20px 20px 0;
+    padding-bottom: 12px;
+    border-bottom: var(--edge) solid var(--forest);
+    font-size: clamp(19px, 2vw, 23px);
+    color: var(--forest);
   }
-  .tile:hover img {
-    transform: scale(1.05);
+  .glance-card h3 a {
+    transition: color 0.15s;
   }
-  .tile .cap {
-    position: absolute;
-    inset: auto 0 0 0;
-    padding: 40px 16px 14px;
-    color: #fff;
+  .glance-card h3 a:hover {
+    color: var(--accent-ink);
+  }
+  .glance-items {
+    display: grid;
+    gap: 10px;
+    margin: 16px 20px 20px;
+  }
+  .glance-items li {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  /* A dotted leader from dish to price, like a printed menu card. */
+  .leader {
+    flex: 1;
+    min-width: 16px;
+    border-bottom: 2px dotted var(--stone);
+    transform: translateY(-4px);
+  }
+  .glance-items .price {
     font-family: var(--display);
     font-weight: 800;
-    font-size: 17px;
+    color: var(--accent-ink);
+    white-space: nowrap;
+  }
+  .glance-more {
+    margin: auto 20px 20px;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    background: linear-gradient(0deg, rgba(22, 40, 26, 0.88), transparent);
+    color: var(--accent-ink);
+  }
+
+  /* ---------- open / closed ---------- */
+  .open-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .open-status b {
+    font-weight: 700;
+  }
+  .open-dot {
+    flex: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--stone);
+  }
+  .open-status[data-state="open"] .open-dot {
+    background: #2e9d58;
+    box-shadow: 0 0 0 4px rgba(46, 157, 88, 0.22);
+  }
+  .open-status[data-state="closed"] .open-dot {
+    background: var(--accent);
+  }
+  .open-status--hero {
+    color: var(--forest);
+  }
+  .open-status--visit {
+    margin: 18px 0 4px;
+    color: var(--ivory);
+  }
+
+  /* ---------- questions ---------- */
+  .faq {
+    display: grid;
+    gap: 28px;
+  }
+  .qa-list {
+    border-top: var(--edge) solid var(--forest);
+  }
+  .qa {
+    border-bottom: var(--edge) solid var(--forest);
+  }
+  .qa summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    min-height: 64px;
+    padding: 16px 0;
+    list-style: none;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(17px, 2vw, 21px);
+    line-height: 1.15;
+    text-transform: uppercase;
+    color: var(--forest);
+    transition: color 0.15s;
+  }
+  .qa summary::-webkit-details-marker {
+    display: none;
+  }
+  .qa summary:hover,
+  .qa[open] summary {
+    color: var(--accent-ink);
+  }
+  html[data-lang="kn"] .qa summary {
+    line-height: 1.4;
+  }
+  /* A plus that turns into a minus. */
+  .qa-icon {
+    position: relative;
+    flex: none;
+    width: 30px;
+    height: 30px;
+    border: var(--edge) solid currentColor;
+  }
+  .qa-icon::before,
+  .qa-icon::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 12px;
+    height: 3px;
+    background: currentColor;
+    translate: -50% -50%;
+    transition: rotate 0.25s var(--ease);
+  }
+  .qa-icon::after {
+    rotate: 90deg;
+  }
+  .qa[open] .qa-icon::after {
+    rotate: 0deg;
+  }
+  .qa-a {
+    padding-bottom: 20px;
+    max-width: 68ch;
+  }
+  /* Opening slides the answer down where the browser can animate to height: auto. */
+  .qa::details-content {
+    block-size: 0;
+    overflow-y: clip;
+    transition:
+      block-size 0.3s var(--ease),
+      content-visibility 0.3s allow-discrete;
+  }
+  .qa[open]::details-content {
+    block-size: auto;
   }
 
   /* ---------- visit ---------- */
@@ -1077,7 +1274,7 @@
   /* ---------- menu page ---------- */
   .menu-nav {
     position: sticky;
-    top: var(--nav-h);
+    top: var(--nav-solid);
     z-index: 20;
     display: flex;
     gap: 8px;
@@ -1121,6 +1318,18 @@
     font-size: clamp(22px, 3vw, 30px);
     padding-bottom: 12px;
     border-bottom: var(--edge) solid var(--forest);
+  }
+  .menu-photo {
+    position: relative;
+    aspect-ratio: 21 / 9;
+    margin-top: 18px;
+    overflow: hidden;
+    background: var(--stone);
+    border: var(--edge) solid var(--forest);
+    box-shadow: var(--hard);
+  }
+  .menu-photo img {
+    object-fit: cover;
   }
   .item {
     display: grid;
@@ -1201,6 +1410,9 @@
     display: grid;
     margin-top: 8px;
   }
+  .fsocial-head {
+    margin-top: 24px;
+  }
   .flinks a,
   .flink {
     display: inline-flex;
@@ -1240,34 +1452,104 @@
     border-color: rgba(207, 216, 200, 0.45);
   }
 
-  /* ---------- 404 ---------- */
+  /* ---------- 404: English and Kannada side by side ---------- */
   .notfound {
-    min-height: 70svh;
+    min-height: 100svh;
+    display: grid;
+    align-content: center;
   }
-  .notfound h1 {
+  .notfound-sides {
+    display: grid;
+    gap: 56px;
+    width: 100%;
+  }
+  .notfound-heading {
     margin-top: 12px;
     max-width: 16ch;
+    font-size: clamp(34px, 5vw, 64px);
+  }
+  [lang="kn-IN"] .notfound-heading {
+    line-height: 1.2;
   }
   .sources {
     margin-top: 14px;
   }
 
-  /* ---------- reveal (only once JS is running, so content never hides without it) ---------- */
-  html.js .reveal {
-    opacity: 0;
-    transform: translateY(18px);
-    transition:
-      opacity 0.55s ease-out,
-      transform 0.55s ease-out;
+  /* ---------- motion ----------
+     Sections rise into place as they scroll into view: a scroll-driven animation, so nothing waits on JavaScript, and
+     browsers without scroll timelines simply show the content. Movement only, never a fade: content resting at the fold
+     mid-animation is still at full contrast. The band colours stay put; only the content moves. */
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      .reveal > .wrap {
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0px entry 260px;
+      }
+    }
+    /* The hero settles in on load. The headline only moves (never fades), so it paints at once for LCP. */
+    .hero-copy > * {
+      animation: rise 0.8s var(--ease) both;
+    }
+    .hero-copy > :nth-child(2) {
+      animation-name: lift;
+      animation-delay: 0.05s;
+    }
+    .hero-copy > :nth-child(3) {
+      animation-delay: 0.15s;
+    }
+    .hero-copy > :nth-child(n + 4) {
+      animation-delay: 0.25s;
+    }
+    .hero .hit {
+      animation: stamp 0.6s 0.35s var(--ease) both;
+    }
+    .mobile-menu nav a {
+      opacity: 0;
+      translate: 0 12px;
+      transition:
+        opacity 0.3s,
+        translate 0.3s var(--ease);
+    }
+    .mobile-menu[data-open="true"] nav a {
+      opacity: 1;
+      translate: 0 0;
+      transition-delay: calc(0.06s + var(--i) * 0.045s);
+    }
   }
-  html.js .reveal.in {
-    opacity: 1;
-    transform: none;
+  @keyframes reveal {
+    from {
+      transform: translateY(48px);
+    }
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+  }
+  @keyframes lift {
+    from {
+      transform: translateY(22px);
+    }
+  }
+  /* Pressed on like a rubber stamp, settling at its tilt. */
+  @keyframes stamp {
+    from {
+      transform: rotate(-6deg) scale(1.3);
+    }
+    65% {
+      transform: rotate(-1.2deg) scale(0.97);
+    }
+    to {
+      transform: rotate(-1.6deg);
+    }
   }
 
   /* ================= larger screens ================= */
   @media (min-width: 640px) {
-    .practices {
+    .practices,
+    .glance {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .mgrid {
@@ -1275,20 +1557,6 @@
     }
     .mcard:last-child:nth-child(odd) {
       grid-column: auto;
-    }
-    .tiles {
-      grid-auto-flow: row;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin: 48px 0 0;
-      padding: 0;
-      overflow: visible;
-    }
-    .tiles > li {
-      padding: 0;
-    }
-    .tile {
-      aspect-ratio: 4 / 3;
     }
     .cta .btn {
       flex: 0 0 auto;
@@ -1305,7 +1573,7 @@
     }
     .hero::after {
       background:
-        linear-gradient(180deg, rgba(22, 40, 26, 0.45) 0, rgba(22, 40, 26, 0) 140px),
+        linear-gradient(180deg, rgba(22, 40, 26, 0.62) 0, rgba(22, 40, 26, 0) 150px),
         linear-gradient(0deg, var(--ivory) 3%, rgba(243, 236, 218, 0.5) 26%, transparent 55%);
     }
     .btn {
@@ -1426,6 +1694,9 @@
       grid-template-columns: 2fr 1fr 1fr;
       gap: 34px;
     }
+    .notfound-sides {
+      grid-template-columns: 1fr 1fr;
+    }
     .fbrand {
       grid-column: auto;
     }
@@ -1436,7 +1707,12 @@
       --nav-h: 68px;
     }
     .site-nav[data-solid="true"] {
-      height: 60px;
+      height: var(--nav-solid);
+    }
+    .faq {
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: clamp(32px, 5vw, 72px);
+      align-items: start;
     }
     .nav-links {
       display: flex;
@@ -1484,6 +1760,11 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
       margin-top: 52px;
     }
+    .glance {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+      margin-top: 52px;
+    }
     .pcard {
       padding: 30px 26px;
     }
@@ -1527,16 +1808,72 @@
     .hero-media {
       animation: none;
     }
-    html.js .reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
     *,
     *::before,
     *::after {
       animation-duration: 0.001ms !important;
       transition-duration: 0.001ms !important;
     }
+  }
+}
+
+/* ---------- page changes ----------
+   Within a language, React cross-fades the page (the header and footer stay put). Switching language loads the other
+   site, which the browser cross-fades too where it can. */
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(.page) {
+  animation: page-out 0.16s ease-in both;
+}
+::view-transition-new(.page) {
+  animation: page-in 0.36s var(--ease) both;
+}
+@keyframes page-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+/* ---------- print: the menu and the facts, without the chrome ---------- */
+@media print {
+  .site-nav,
+  .mobile-menu,
+  .skip-link,
+  .menu-nav,
+  .hero-media,
+  .lang {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
+  .hero {
+    min-height: 0;
+  }
+  .band,
+  .site-footer {
+    background: #fff;
+    color: var(--forest);
+  }
+  .band :is(h2, h3, p, .lead, .eyebrow),
+  .vline dd {
+    color: var(--forest);
+  }
+  .reveal > .wrap {
+    animation: none !important;
   }
 }

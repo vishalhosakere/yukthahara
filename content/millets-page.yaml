@@ -5,8 +5,12 @@ title:
   en: The grains, honestly.
   kn: ಧಾನ್ಯಗಳ ಬಗ್ಗೆ, ಪ್ರಾಮಾಣಿಕವಾಗಿ.
 intro:
-  en: What millets really offer — the well-supported benefits, the honest limits, and why they matter for the planet.
-  kn: ಸಿರಿಧಾನ್ಯಗಳು ನಿಜವಾಗಿ ಏನು ನೀಡುತ್ತವೆ — ಆಧಾರವಿರುವ ಪ್ರಯೋಜನಗಳು, ಅವುಗಳ ಮಿತಿಗಳು ಮತ್ತು ಭೂಮಿಗೆ ಅವು ಏಕೆ ಮುಖ್ಯ.
+  en: >-
+    What millets really offer — the well-supported benefits, the honest limits,
+    and why they matter for the planet.
+  kn: >-
+    ಸಿರಿಧಾನ್ಯಗಳು ನಿಜವಾಗಿ ಏನು ನೀಡುತ್ತವೆ — ಆಧಾರವಿರುವ ಪ್ರಯೋಜನಗಳು, ಅವುಗಳ ಮಿತಿಗಳು
+    ಮತ್ತು ಭೂಮಿಗೆ ಅವು ಏಕೆ ಮುಖ್ಯ.
 tableHeading:
   en: The five siridhanya, by the numbers
   kn: ಪಂಚ ಸಿರಿಧಾನ್ಯ, ಅಂಕಿಅಂಶಗಳಲ್ಲಿ
@@ -25,38 +29,76 @@ columns:
     kn: ಕಬ್ಬಿಣಾಂಶ
   gi:
     en: Glycemic index
-    kn: ಜಿಐ
+    kn: ಗ್ಲೈಸೆಮಿಕ್ ಸೂಚ್ಯಂಕ
 tableNote:
-  en: "* Browntop is data-poor (absent from standard food-composition tables) — figures are indicative only. † Sources disagree widely; ranges shown. Primary source: IFCT 2017 (NIN); GI from Anitha et al. 2021."
-  kn: "* ಕೊರಲೆ ಕುರಿತ ದತ್ತಾಂಶ ಕಡಿಮೆ (ಸಾಮಾನ್ಯ ಆಹಾರ-ಸಂಯೋಜನೆ ಕೋಷ್ಟಕಗಳಲ್ಲಿ ಇಲ್ಲ) — ಅಂಕಿಗಳು ಅಂದಾಜು ಮಾತ್ರ. † ಮೂಲಗಳ ನಡುವೆ ಹೆಚ್ಚು ವ್ಯತ್ಯಾಸವಿದೆ; ವ್ಯಾಪ್ತಿಯನ್ನು ತೋರಿಸಲಾಗಿದೆ. ಮುಖ್ಯ ಮೂಲ: IFCT 2017 (NIN); ಜಿಐ: Anitha ಮತ್ತಿತರರು, 2021."
+  en: >-
+    * Browntop is data-poor (absent from standard food-composition tables) —
+    figures are indicative only. † Sources disagree widely; ranges shown.
+    Primary source: IFCT 2017 (NIN); GI from Anitha et al. 2021.
+  kn: >-
+    * ಕೊರಲೆ ಕುರಿತ ದತ್ತಾಂಶ ಕಡಿಮೆ (ಸಾಮಾನ್ಯ ಆಹಾರ-ಸಂಯೋಜನೆ ಕೋಷ್ಟಕಗಳಲ್ಲಿ ಇಲ್ಲ) —
+    ಅಂಕಿಗಳು ಅಂದಾಜು ಮಾತ್ರ. † ಮೂಲಗಳ ನಡುವೆ ಹೆಚ್ಚು ವ್ಯತ್ಯಾಸವಿದೆ; ವ್ಯಾಪ್ತಿಯನ್ನು
+    ತೋರಿಸಲಾಗಿದೆ. ಮುಖ್ಯ ಮೂಲ: IFCT 2017 (NIN); ಜಿಐ: Anitha ಮತ್ತಿತರರು, 2021.
 honesty:
   heading:
     en: What millets can & can't do
     kn: ಸಿರಿಧಾನ್ಯಗಳು ಏನು ಮಾಡಬಲ್ಲವು, ಏನು ಮಾಡಲಾರವು
   points:
     - lead:
-        en: "Well-supported:"
-        kn: "ವೈಜ್ಞಾನಿಕ ಆಧಾರವಿರುವುದು:"
+        en: 'Well-supported:'
+        kn: 'ವೈಜ್ಞಾನಿಕ ಆಧಾರವಿರುವುದು:'
       body:
-        en: high dietary fibre; lower average glycemic index than white rice and refined wheat; good iron and magnesium; naturally gluten-free; may help manage blood sugar and cholesterol as part of a balanced diet.
-        kn: ಹೆಚ್ಚು ನಾರು; ಬಿಳಿ ಅಕ್ಕಿ ಮತ್ತು ಮೈದಾಗಿಂತ ಸರಾಸರಿ ಕಡಿಮೆ ಗ್ಲೈಸೆಮಿಕ್ ಸೂಚ್ಯಂಕ; ಉತ್ತಮ ಪ್ರಮಾಣದ ಕಬ್ಬಿಣಾಂಶ ಮತ್ತು ಮೆಗ್ನೀಸಿಯಂ; ಸ್ವಾಭಾವಿಕವಾಗಿ ಗ್ಲುಟನ್-ಮುಕ್ತ; ಸಮತೋಲಿತ ಆಹಾರದ ಭಾಗವಾಗಿ ರಕ್ತದ ಸಕ್ಕರೆ ಮತ್ತು ಕೊಲೆಸ್ಟ್ರಾಲ್ ನಿರ್ವಹಣೆಗೆ ಸಹಾಯ ಮಾಡಬಹುದು.
+        en: >-
+          high dietary fibre; lower average glycemic index than white rice and
+          refined wheat; good iron and magnesium; naturally gluten-free; may
+          help manage blood sugar and cholesterol as part of a balanced diet.
+        kn: >-
+          ಹೆಚ್ಚು ನಾರು; ಬಿಳಿ ಅಕ್ಕಿ ಮತ್ತು ಮೈದಾಗಿಂತ ಸರಾಸರಿ ಕಡಿಮೆ ಗ್ಲೈಸೆಮಿಕ್
+          ಸೂಚ್ಯಂಕ; ಉತ್ತಮ ಪ್ರಮಾಣದ ಕಬ್ಬಿಣಾಂಶ ಮತ್ತು ಮೆಗ್ನೀಸಿಯಂ; ಸ್ವಾಭಾವಿಕವಾಗಿ
+          ಗ್ಲುಟನ್-ಮುಕ್ತ; ಸಮತೋಲಿತ ಆಹಾರದ ಭಾಗವಾಗಿ ರಕ್ತದ ಸಕ್ಕರೆ ಮತ್ತು ಕೊಲೆಸ್ಟ್ರಾಲ್
+          ನಿರ್ವಹಣೆಗೆ ಸಹಾಯ ಮಾಡಬಹುದು.
     - lead:
-        en: "We don't claim:"
-        kn: "ನಾವು ಹೇಳುವುದಿಲ್ಲ:"
+        en: 'We don''t claim:'
+        kn: 'ನಾವು ಹೇಳುವುದಿಲ್ಲ:'
       body:
-        en: that millets cure or reverse diabetes, cancer, thyroid, PCOD or any disease. There is no clinical evidence for that, and some millets can even affect thyroid function. Not all "positive" millets are low-GI — kodo and little are intermediate.
-        kn: ಸಿರಿಧಾನ್ಯಗಳು ಮಧುಮೇಹ, ಕ್ಯಾನ್ಸರ್, ಥೈರಾಯ್ಡ್, ಪಿಸಿಒಡಿ ಅಥವಾ ಯಾವುದೇ ರೋಗವನ್ನು ಗುಣಪಡಿಸುತ್ತವೆ ಅಥವಾ ಹಿಮ್ಮೆಟ್ಟಿಸುತ್ತವೆ ಎಂದು. ಅದಕ್ಕೆ ಯಾವುದೇ ವೈದ್ಯಕೀಯ ಪುರಾವೆ ಇಲ್ಲ; ಕೆಲವು ಸಿರಿಧಾನ್ಯಗಳು ಥೈರಾಯ್ಡ್ ಕಾರ್ಯದ ಮೇಲೆ ಪರಿಣಾಮವನ್ನೂ ಬೀರಬಹುದು. ಎಲ್ಲಾ “ಧನಾತ್ಮಕ” ಸಿರಿಧಾನ್ಯಗಳೂ ಕಡಿಮೆ-ಜಿಐ ಅಲ್ಲ — ಹಾರಕ ಮತ್ತು ಸಾಮೆ ಮಧ್ಯಮ ಮಟ್ಟದವು.
+        en: >-
+          that millets cure or reverse diabetes, cancer, thyroid, PCOD or any
+          disease. There is no clinical evidence for that, and some millets can
+          even affect thyroid function. Not all "positive" millets are low-GI —
+          kodo and little are intermediate.
+        kn: >-
+          ಸಿರಿಧಾನ್ಯಗಳು ಮಧುಮೇಹ, ಕ್ಯಾನ್ಸರ್, ಥೈರಾಯ್ಡ್, ಪಿಸಿಒಡಿ ಅಥವಾ ಯಾವುದೇ ರೋಗವನ್ನು
+          ಗುಣಪಡಿಸುತ್ತವೆ ಅಥವಾ ಹಿಮ್ಮೆಟ್ಟಿಸುತ್ತವೆ ಎಂದು. ಅದಕ್ಕೆ ಯಾವುದೇ ವೈದ್ಯಕೀಯ
+          ಪುರಾವೆ ಇಲ್ಲ; ಕೆಲವು ಸಿರಿಧಾನ್ಯಗಳು ಥೈರಾಯ್ಡ್ ಕಾರ್ಯದ ಮೇಲೆ ಪರಿಣಾಮವನ್ನೂ
+          ಬೀರಬಹುದು. ಎಲ್ಲಾ “ಧನಾತ್ಮಕ” ಸಿರಿಧಾನ್ಯಗಳೂ ಕಡಿಮೆ-ಜಿಐ ಅಲ್ಲ — ಹಾರಕ ಮತ್ತು
+          ಸಾಮೆ ಮಧ್ಯಮ ಮಟ್ಟದವು.
     - lead:
-        en: "Prepare them well:"
-        kn: "ಸರಿಯಾಗಿ ತಯಾರಿಸಿ:"
+        en: 'Prepare them well:'
+        kn: 'ಸರಿಯಾಗಿ ತಯಾರಿಸಿ:'
       body:
-        en: soaking and fermenting reduce anti-nutrients (phytic acid) and improve mineral absorption. Buy clean, well-stored grain — kodo in particular should never be mouldy.
-        kn: ನೆನೆಸುವುದು ಮತ್ತು ಹುದುಗಿಸುವುದು ಪೋಷಕ-ವಿರೋಧಿ ಅಂಶಗಳನ್ನು (ಫೈಟಿಕ್ ಆಮ್ಲ) ಕಡಿಮೆ ಮಾಡಿ ಖನಿಜಗಳ ಹೀರಿಕೆಯನ್ನು ಹೆಚ್ಚಿಸುತ್ತದೆ. ಸ್ವಚ್ಛವಾದ, ಚೆನ್ನಾಗಿ ಸಂಗ್ರಹಿಸಿದ ಧಾನ್ಯವನ್ನೇ ಕೊಳ್ಳಿ — ಮುಖ್ಯವಾಗಿ ಹಾರಕಕ್ಕೆ ಎಂದಿಗೂ ಬೂಷ್ಟು ಹಿಡಿದಿರಬಾರದು.
-  image: /media/millet-grains-raw.jpg
-  imageAlt: A ripe millet head on the plant, in a green field
+        en: >-
+          soaking and fermenting reduce anti-nutrients (phytic acid) and improve
+          mineral absorption. Buy clean, well-stored grain — kodo in particular
+          should never be mouldy.
+        kn: >-
+          ನೆನೆಸುವುದು ಮತ್ತು ಹುದುಗಿಸುವುದು ಪೋಷಕ-ವಿರೋಧಿ ಅಂಶಗಳನ್ನು (ಫೈಟಿಕ್ ಆಮ್ಲ)
+          ಕಡಿಮೆ ಮಾಡಿ ಖನಿಜಗಳ ಹೀರಿಕೆಯನ್ನು ಹೆಚ್ಚಿಸುತ್ತದೆ. ಸ್ವಚ್ಛವಾದ, ಚೆನ್ನಾಗಿ
+          ಸಂಗ್ರಹಿಸಿದ ಧಾನ್ಯವನ್ನೇ ಕೊಳ್ಳಿ — ಮುಖ್ಯವಾಗಿ ಹಾರಕಕ್ಕೆ ಎಂದಿಗೂ ಬೂಷ್ಟು
+          ಹಿಡಿದಿರಬಾರದು.
+  image: /media/millets-page/honesty/image.jpg
+  imageAlt:
+    en: Ripe pearl millet heads in a field on a hazy morning
+    kn: ಮಬ್ಬು ಮುಂಜಾನೆಯ ಹೊಲದಲ್ಲಿ ಮಾಗಿದ ಸಜ್ಜೆ ತೆನೆಗಳು
 disclaimer:
-  en: Millets are a nutritious whole grain that can support a balanced diet; they are not a treatment or cure for any disease. Consult a qualified doctor before changing your diet to manage a medical condition, and never stop prescribed treatment.
-  kn: ಸಿರಿಧಾನ್ಯಗಳು ಸಮತೋಲಿತ ಆಹಾರಕ್ಕೆ ಪೂರಕವಾದ ಪೌಷ್ಟಿಕ ಪೂರ್ಣಧಾನ್ಯಗಳು; ಯಾವುದೇ ರೋಗಕ್ಕೆ ಚಿಕಿತ್ಸೆ ಅಥವಾ ಪರಿಹಾರವಲ್ಲ. ಆರೋಗ್ಯ ಸಮಸ್ಯೆಯ ನಿರ್ವಹಣೆಗಾಗಿ ಆಹಾರ ಬದಲಿಸುವ ಮೊದಲು ಅರ್ಹ ವೈದ್ಯರನ್ನು ಸಂಪರ್ಕಿಸಿ; ವೈದ್ಯರು ಸೂಚಿಸಿದ ಚಿಕಿತ್ಸೆಯನ್ನು ಎಂದಿಗೂ ನಿಲ್ಲಿಸಬೇಡಿ.
+  en: >-
+    Millets are a nutritious whole grain that can support a balanced diet; they
+    are not a treatment or cure for any disease. Consult a qualified doctor
+    before changing your diet to manage a medical condition, and never stop
+    prescribed treatment.
+  kn: >-
+    ಸಿರಿಧಾನ್ಯಗಳು ಸಮತೋಲಿತ ಆಹಾರಕ್ಕೆ ಪೂರಕವಾದ ಪೌಷ್ಟಿಕ ಪೂರ್ಣಧಾನ್ಯಗಳು; ಯಾವುದೇ ರೋಗಕ್ಕೆ
+    ಚಿಕಿತ್ಸೆ ಅಥವಾ ಪರಿಹಾರವಲ್ಲ. ಆರೋಗ್ಯ ಸಮಸ್ಯೆಯ ನಿರ್ವಹಣೆಗಾಗಿ ಆಹಾರ ಬದಲಿಸುವ ಮೊದಲು
+    ಅರ್ಹ ವೈದ್ಯರನ್ನು ಸಂಪರ್ಕಿಸಿ; ವೈದ್ಯರು ಸೂಚಿಸಿದ ಚಿಕಿತ್ಸೆಯನ್ನು ಎಂದಿಗೂ ನಿಲ್ಲಿಸಬೇಡಿ.
 environment:
   eyebrow:
     en: For the planet
@@ -65,16 +107,32 @@ environment:
     en: A C4 crop for a thirsty world.
     kn: ನೀರಿನ ಕೊರತೆಯ ಜಗತ್ತಿಗೆ C4 ಬೆಳೆ.
   body:
-    en: Millets use C4 photosynthesis — more grain per drop. They grow rainfed where rice cannot, need little or no fertiliser, and ripen in 45–90 days. In India, rice's irrigation water footprint is roughly five to seven times that of millets.
-    kn: ಸಿರಿಧಾನ್ಯಗಳು C4 ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ ನಡೆಸುತ್ತವೆ — ಪ್ರತಿ ಹನಿ ನೀರಿಗೆ ಹೆಚ್ಚು ಧಾನ್ಯ. ಭತ್ತ ಬೆಳೆಯಲಾಗದ ಕಡೆಯೂ ಮಳೆಯಾಶ್ರಿತವಾಗಿ ಬೆಳೆಯುತ್ತವೆ, ಅಲ್ಪ ಗೊಬ್ಬರ ಸಾಕು ಅಥವಾ ಬೇಕೇ ಇಲ್ಲ, ಮತ್ತು 45–90 ದಿನಗಳಲ್ಲಿ ಕೊಯ್ಲಿಗೆ ಬರುತ್ತವೆ. ಭಾರತದಲ್ಲಿ ಭತ್ತದ ನೀರಾವರಿ ಬಳಕೆ ಸಿರಿಧಾನ್ಯಗಳಿಗಿಂತ ಸುಮಾರು 5–7 ಪಟ್ಟು ಹೆಚ್ಚು.
+    en: >-
+      Millets use C4 photosynthesis — more grain per drop. They grow rainfed
+      where rice cannot, need little or no fertiliser, and ripen in 45–90 days.
+      In India, rice's irrigation water footprint is roughly five to seven times
+      that of millets.
+    kn: >-
+      ಸಿರಿಧಾನ್ಯಗಳು C4 ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ ನಡೆಸುತ್ತವೆ — ಪ್ರತಿ ಹನಿ ನೀರಿಗೆ ಹೆಚ್ಚು
+      ಧಾನ್ಯ. ಭತ್ತ ಬೆಳೆಯಲಾಗದ ಕಡೆಯೂ ಮಳೆಯಾಶ್ರಿತವಾಗಿ ಬೆಳೆಯುತ್ತವೆ, ಅಲ್ಪ ಗೊಬ್ಬರ ಸಾಕು
+      ಅಥವಾ ಬೇಕೇ ಇಲ್ಲ, ಮತ್ತು 45–90 ದಿನಗಳಲ್ಲಿ ಕೊಯ್ಲಿಗೆ ಬರುತ್ತವೆ. ಭಾರತದಲ್ಲಿ ಭತ್ತದ
+      ನೀರಾವರಿ ಬಳಕೆ ಸಿರಿಧಾನ್ಯಗಳಿಗಿಂತ ಸುಮಾರು 5–7 ಪಟ್ಟು ಹೆಚ್ಚು.
   sources:
-    en: "Sources: FAO (International Year of Millets 2023), ICRISAT, Davis et al. 2018."
-    kn: "ಮೂಲಗಳು: FAO (ಅಂತರರಾಷ್ಟ್ರೀಯ ಸಿರಿಧಾನ್ಯ ವರ್ಷ 2023), ICRISAT, Davis ಮತ್ತಿತರರು 2018."
+    en: >-
+      Sources: FAO (International Year of Millets 2023), ICRISAT, Davis et al.
+      2018.
+    kn: >-
+      ಮೂಲಗಳು: FAO (ಅಂತರರಾಷ್ಟ್ರೀಯ ಸಿರಿಧಾನ್ಯ ವರ್ಷ 2023), ICRISAT, Davis ಮತ್ತಿತರರು
+      2018.
 sources:
   eyebrow:
     en: Sources
     kn: ಮೂಲಗಳು
-  body: "Indian Food Composition Tables 2017 (NIN) · USDA FoodData Central · Anitha et al., *Frontiers in Nutrition* 2021 (glycemic response) · FAO International Year of Millets 2023 · ICRISAT · Davis et al., *Science Advances* 2018."
+  body: >-
+    Indian Food Composition Tables 2017 (NIN) · USDA FoodData Central · Anitha
+    et al., *Frontiers in Nutrition* 2021 (glycemic response) · FAO
+    International Year of Millets 2023 · ICRISAT · Davis et al., *Science
+    Advances* 2018.
 ctaMenu:
   en: See the menu
   kn: ಮೆನು ನೋಡಿ

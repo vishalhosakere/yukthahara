@@ -3,35 +3,49 @@ hero:
     en: Millet · the apt food
     kn: ಸಿರಿಧಾನ್ಯ · ಯುಕ್ತವಾದ ಆಹಾರ
   headline:
-    en: "Eat right,\neat *millets.*"
-    kn: "ಸರಿಯಾಗಿ ತಿನ್ನಿ,\n*ಸಿರಿಧಾನ್ಯ* ತಿನ್ನಿ."
+    en: |-
+      Eat right,
+      eat *millets.*
+    kn: |-
+      ಸರಿಯಾಗಿ ತಿನ್ನಿ,
+      *ಸಿರಿಧಾನ್ಯ* ತಿನ್ನಿ.
   intro:
-    en: "A millet kitchen in Mysore, cooked *the old way* — wood-pressed oils, clay and iron, palm jaggery, and the five positive siridhanya grains."
-    kn: "ಮೈಸೂರಿನ ಸಿರಿಧಾನ್ಯ ಅಡುಗೆಮನೆ, *ಹಳೆಯ ಪದ್ಧತಿಯಲ್ಲಿ* — ಗಾಣದ ಎಣ್ಣೆ, ಮಣ್ಣಿನ ಮತ್ತು ಕಬ್ಬಿಣದ ಪಾತ್ರೆಗಳು, ತಾಳೆ ಬೆಲ್ಲ ಮತ್ತು ಪಂಚ ಸಿರಿಧಾನ್ಯ."
+    en: >-
+      A millet kitchen in Mysuru, cooked *the old way* — wood-pressed oils, clay
+      and iron, palm jaggery, and the five positive siridhanya grains.
+    kn: >-
+      ಮೈಸೂರಿನ ಸಿರಿಧಾನ್ಯ ಅಡುಗೆಮನೆ, *ಹಳೆಯ ಪದ್ಧತಿಯಲ್ಲಿ* — ಗಾಣದ ಎಣ್ಣೆ, ಮಣ್ಣಿನ ಮತ್ತು
+      ಕಬ್ಬಿಣದ ಪಾತ್ರೆಗಳು, ತಾಳೆ ಬೆಲ್ಲ ಮತ್ತು ಪಂಚ ಸಿರಿಧಾನ್ಯ.
   primaryCta:
     en: View the menu
     kn: ಮೆನು ನೋಡಿ
   secondaryCta:
     en: Visit us
     kn: ಭೇಟಿ ನೀಡಿ
-  image: /media/millet-ears-golden-field.jpg
-  imageAlt: Golden millet heads standing against a pale morning sky
-  video: /media/hero-field.mp4
+  image: /media/home/hero/image.jpg
+  imageAlt:
+    en: Golden millet heads standing against a pale morning sky
+    kn: ಮುಂಜಾನೆಯ ತಿಳಿ ಆಕಾಶದ ಎದುರು ನಿಂತ ಹೊಂಬಣ್ಣದ ಕಿರುಧಾನ್ಯದ ತೆನೆಗಳು
   playVideo: false
 practices:
   eyebrow:
     en: How we cook
     kn: ನಾವು ಹೇಗೆ ಅಡುಗೆ ಮಾಡುತ್ತೇವೆ
   heading:
-    en: "Nothing refined. *Nothing hidden.*"
-    kn: "ಸಂಸ್ಕರಿಸಿದ್ದು ಇಲ್ಲ. *ಮರೆಮಾಚಿದ್ದೂ ಇಲ್ಲ.*"
+    en: Nothing refined. *Nothing hidden.*
+    kn: ಸಂಸ್ಕರಿಸಿದ್ದು ಇಲ್ಲ. *ಮರೆಮಾಚಿದ್ದೂ ಇಲ್ಲ.*
   items:
     - title:
         en: Wood-pressed oils
         kn: ಗಾಣದ ಎಣ್ಣೆ
       body:
-        en: Cold-pressed in a bull-driven gaana — no solvents, no bleaching, no deodorising. The oil keeps its aroma and natural nutrients.
-        kn: ಎತ್ತಿನ ಗಾಣದಲ್ಲಿ ಹಿಂಡಿದ ಎಣ್ಣೆ — ರಾಸಾಯನಿಕ ದ್ರಾವಕಗಳಿಲ್ಲ, ಬಿಳುಪುಗೊಳಿಸುವುದಿಲ್ಲ, ವಾಸನೆ ತೆಗೆಯುವುದಿಲ್ಲ. ಎಣ್ಣೆಯ ಸುವಾಸನೆ ಮತ್ತು ನೈಸರ್ಗಿಕ ಪೋಷಕಾಂಶಗಳು ಉಳಿಯುತ್ತವೆ.
+        en: >-
+          Cold-pressed in a bull-driven gaana — no solvents, no bleaching, no
+          deodorising. The oil keeps its aroma and natural nutrients.
+        kn: >-
+          ಎತ್ತಿನ ಗಾಣದಲ್ಲಿ ಹಿಂಡಿದ ಎಣ್ಣೆ — ರಾಸಾಯನಿಕ ದ್ರಾವಕಗಳಿಲ್ಲ,
+          ಬಿಳುಪುಗೊಳಿಸುವುದಿಲ್ಲ, ವಾಸನೆ ತೆಗೆಯುವುದಿಲ್ಲ. ಎಣ್ಣೆಯ ಸುವಾಸನೆ ಮತ್ತು
+          ನೈಸರ್ಗಿಕ ಪೋಷಕಾಂಶಗಳು ಉಳಿಯುತ್ತವೆ.
       nevers:
         - en: No refined oil
           kn: ಸಂಸ್ಕರಿಸಿದ ಎಣ್ಣೆ ಇಲ್ಲ
@@ -39,8 +53,13 @@ practices:
         en: Iron, clay & brass
         kn: ಕಬ್ಬಿಣ, ಮಣ್ಣು, ಹಿತ್ತಾಳೆ
       body:
-        en: Hot, sour food can pull aluminium into your meal. Our vessels are inert — and iron even adds a little dietary iron.
-        kn: ಬಿಸಿಯಾದ, ಹುಳಿಯಾದ ಆಹಾರ ಅಲ್ಯೂಮಿನಿಯಂ ಪಾತ್ರೆಯ ಲೋಹವನ್ನು ಊಟಕ್ಕೆ ಸೇರಿಸಬಹುದು. ನಮ್ಮ ಪಾತ್ರೆಗಳು ಹಾಗೆ ಮಾಡುವುದಿಲ್ಲ — ಕಬ್ಬಿಣದ ಪಾತ್ರೆ ಸ್ವಲ್ಪ ಕಬ್ಬಿಣಾಂಶವನ್ನೂ ಸೇರಿಸುತ್ತದೆ.
+        en: >-
+          Hot, sour food can pull aluminium into your meal. Our vessels are
+          inert — and iron even adds a little dietary iron.
+        kn: >-
+          ಬಿಸಿಯಾದ, ಹುಳಿಯಾದ ಆಹಾರ ಅಲ್ಯೂಮಿನಿಯಂ ಪಾತ್ರೆಯ ಲೋಹವನ್ನು ಊಟಕ್ಕೆ ಸೇರಿಸಬಹುದು.
+          ನಮ್ಮ ಪಾತ್ರೆಗಳು ಹಾಗೆ ಮಾಡುವುದಿಲ್ಲ — ಕಬ್ಬಿಣದ ಪಾತ್ರೆ ಸ್ವಲ್ಪ ಕಬ್ಬಿಣಾಂಶವನ್ನೂ
+          ಸೇರಿಸುತ್ತದೆ.
       nevers:
         - en: No aluminium
           kn: ಅಲ್ಯೂಮಿನಿಯಂ ಇಲ್ಲ
@@ -50,8 +69,12 @@ practices:
         en: Only siridhanya
         kn: ಸಿರಿಧಾನ್ಯ ಮಾತ್ರ
       body:
-        en: More fibre, lower glycemic index, gluten-free — the five positive millets, grown on rain, not chemicals.
-        kn: ಹೆಚ್ಚು ನಾರು, ಕಡಿಮೆ ಗ್ಲೈಸೆಮಿಕ್ ಸೂಚ್ಯಂಕ, ಗ್ಲುಟನ್-ಮುಕ್ತ — ರಾಸಾಯನಿಕಗಳಿಲ್ಲದೆ, ಮಳೆನೀರಿನಲ್ಲೇ ಬೆಳೆದ ಪಂಚ ಸಿರಿಧಾನ್ಯ.
+        en: >-
+          More fibre, lower glycemic index, gluten-free — the five positive
+          millets, grown on rain, not chemicals.
+        kn: >-
+          ಹೆಚ್ಚು ನಾರು, ಕಡಿಮೆ ಗ್ಲೈಸೆಮಿಕ್ ಸೂಚ್ಯಂಕ, ಗ್ಲುಟನ್-ಮುಕ್ತ —
+          ರಾಸಾಯನಿಕಗಳಿಲ್ಲದೆ, ಮಳೆನೀರಿನಲ್ಲೇ ಬೆಳೆದ ಪಂಚ ಸಿರಿಧಾನ್ಯ.
       nevers:
         - en: No rice
           kn: ಅಕ್ಕಿ ಇಲ್ಲ
@@ -61,8 +84,12 @@ practices:
         en: Palm jaggery only
         kn: ತಾಳೆ ಬೆಲ್ಲ ಮಾತ್ರ
       body:
-        en: Unrefined and unbleached, it keeps the minerals white sugar loses. Still a treat — enjoyed simply.
-        kn: ಸಂಸ್ಕರಿಸದ, ಬಿಳುಪುಗೊಳಿಸದ ಬೆಲ್ಲ — ಬಿಳಿ ಸಕ್ಕರೆ ಕಳೆದುಕೊಳ್ಳುವ ಖನಿಜಗಳನ್ನು ಉಳಿಸಿಕೊಳ್ಳುತ್ತದೆ. ಆದರೂ ಸಿಹಿಯೇ — ಮಿತವಾಗಿ ಸವಿಯಿರಿ.
+        en: >-
+          Unrefined and unbleached, it keeps the minerals white sugar loses.
+          Still a treat — enjoyed simply.
+        kn: >-
+          ಸಂಸ್ಕರಿಸದ, ಬಿಳುಪುಗೊಳಿಸದ ಬೆಲ್ಲ — ಬಿಳಿ ಸಕ್ಕರೆ ಕಳೆದುಕೊಳ್ಳುವ ಖನಿಜಗಳನ್ನು
+          ಉಳಿಸಿಕೊಳ್ಳುತ್ತದೆ. ಆದರೂ ಸಿಹಿಯೇ — ಮಿತವಾಗಿ ಸವಿಯಿರಿ.
       nevers:
         - en: No refined sugar
           kn: ಸಂಸ್ಕರಿಸಿದ ಸಕ್ಕರೆ ಇಲ್ಲ
@@ -71,15 +98,21 @@ practices:
       en: Why bother?
       kn: ಏಕೆ ಇಷ್ಟೆಲ್ಲಾ?
     body:
-      en: Refining strips flavour and nutrients for shelf-life and margins. We'd rather cook the way food was meant to be eaten — and tell you exactly how.
-      kn: ಹೆಚ್ಚು ದಿನ ಬಾಳಿಕೆ ಮತ್ತು ಲಾಭಕ್ಕಾಗಿ ಮಾಡುವ ಸಂಸ್ಕರಣೆ ರುಚಿಯನ್ನೂ ಪೋಷಕಾಂಶಗಳನ್ನೂ ಕಳೆಯುತ್ತದೆ. ಆಹಾರವನ್ನು ಹೇಗೆ ತಿನ್ನಬೇಕೋ ಹಾಗೆಯೇ ಬೇಯಿಸುತ್ತೇವೆ — ಹೇಗೆ ಎಂಬುದನ್ನೂ ನಿಮಗೆ ಹೇಳುತ್ತೇವೆ.
+      en: >-
+        Refining strips flavour and nutrients for shelf-life and margins. We'd
+        rather cook the way food was meant to be eaten — and tell you exactly
+        how.
+      kn: >-
+        ಹೆಚ್ಚು ದಿನ ಬಾಳಿಕೆ ಮತ್ತು ಲಾಭಕ್ಕಾಗಿ ಮಾಡುವ ಸಂಸ್ಕರಣೆ ರುಚಿಯನ್ನೂ ಪೋಷಕಾಂಶಗಳನ್ನೂ
+        ಕಳೆಯುತ್ತದೆ. ಆಹಾರವನ್ನು ಹೇಗೆ ತಿನ್ನಬೇಕೋ ಹಾಗೆಯೇ ಬೇಯಿಸುತ್ತೇವೆ — ಹೇಗೆ
+        ಎಂಬುದನ್ನೂ ನಿಮಗೆ ಹೇಳುತ್ತೇವೆ.
 nutrition:
   eyebrow:
     en: The holistic choice
     kn: ಸಮಗ್ರ ಆಯ್ಕೆ
   heading:
-    en: "More of what *matters.*"
-    kn: "ಬೇಕಾದದ್ದೇ *ಹೆಚ್ಚು.*"
+    en: More of what *matters.*
+    kn: ಬೇಕಾದದ್ದೇ *ಹೆಚ್ಚು.*
   columns:
     nutrient:
       en: Per 100g
@@ -111,9 +144,9 @@ nutrition:
     - label:
         en: Glycemic index
         kn: ಗ್ಲೈಸೆಮಿಕ್ ಸೂಚ್ಯಂಕ
-      millet: "~53"
-      rice: "~72"
-      wheat: "~74"
+      millet: ~54
+      rice: ~72
+      wheat: ~74
       lowerIsBetter: true
     - label:
         en: Iron
@@ -133,24 +166,35 @@ nutrition:
     en: Lower is better
     kn: ಕಡಿಮೆ ಇದ್ದಷ್ಟು ಉತ್ತಮ
   note:
-    en: "Millets clearly beat polished rice and refined wheat on fibre, magnesium and glycemic index. Whole wheat is a closer match — the honest comparison is against refined staples. Source: IFCT 2017 / USDA."
-    kn: "ನಾರು, ಮೆಗ್ನೀಸಿಯಂ ಮತ್ತು ಗ್ಲೈಸೆಮಿಕ್ ಸೂಚ್ಯಂಕದಲ್ಲಿ ಸಿರಿಧಾನ್ಯಗಳು ಪಾಲಿಶ್ ಅಕ್ಕಿ ಮತ್ತು ಮೈದಾಗಿಂತ ಸ್ಪಷ್ಟವಾಗಿ ಉತ್ತಮ. ಪೂರ್ಣ ಗೋಧಿ ಇದಕ್ಕೆ ಹೆಚ್ಚು ಹತ್ತಿರ — ಈ ಹೋಲಿಕೆ ಸಂಸ್ಕರಿಸಿದ ಧಾನ್ಯಗಳೊಂದಿಗೆ. ಮೂಲ: IFCT 2017 / USDA."
+    en: >-
+      Millets clearly beat polished rice and refined wheat on fibre, magnesium
+      and glycemic index. Whole wheat is a closer match — the honest comparison
+      is against refined staples. Source: IFCT 2017 / USDA.
+    kn: >-
+      ನಾರು, ಮೆಗ್ನೀಸಿಯಂ ಮತ್ತು ಗ್ಲೈಸೆಮಿಕ್ ಸೂಚ್ಯಂಕದಲ್ಲಿ ಸಿರಿಧಾನ್ಯಗಳು ಪಾಲಿಶ್ ಅಕ್ಕಿ
+      ಮತ್ತು ಮೈದಾಗಿಂತ ಸ್ಪಷ್ಟವಾಗಿ ಉತ್ತಮ. ಪೂರ್ಣ ಗೋಧಿ ಇದಕ್ಕೆ ಹೆಚ್ಚು ಹತ್ತಿರ — ಈ
+      ಹೋಲಿಕೆ ಸಂಸ್ಕರಿಸಿದ ಧಾನ್ಯಗಳೊಂದಿಗೆ. ಮೂಲ: IFCT 2017 / USDA.
   disclaimer:
-    en: Millets are a nutritious whole grain that supports a balanced diet — not a cure for any disease. Consult a doctor before changing your diet for a medical condition.
-    kn: ಸಿರಿಧಾನ್ಯಗಳು ಸಮತೋಲಿತ ಆಹಾರಕ್ಕೆ ಪೂರಕವಾದ ಪೌಷ್ಟಿಕ ಧಾನ್ಯಗಳು — ಯಾವುದೇ ರೋಗಕ್ಕೆ ಚಿಕಿತ್ಸೆಯಲ್ಲ. ಆರೋಗ್ಯ ಸಮಸ್ಯೆಗಾಗಿ ಆಹಾರ ಬದಲಿಸುವ ಮೊದಲು ವೈದ್ಯರನ್ನು ಸಂಪರ್ಕಿಸಿ.
+    en: >-
+      Millets are a nutritious whole grain that supports a balanced diet — not a
+      cure for any disease. Consult a doctor before changing your diet for a
+      medical condition.
+    kn: >-
+      ಸಿರಿಧಾನ್ಯಗಳು ಸಮತೋಲಿತ ಆಹಾರಕ್ಕೆ ಪೂರಕವಾದ ಪೌಷ್ಟಿಕ ಧಾನ್ಯಗಳು — ಯಾವುದೇ ರೋಗಕ್ಕೆ
+      ಚಿಕಿತ್ಸೆಯಲ್ಲ. ಆರೋಗ್ಯ ಸಮಸ್ಯೆಗಾಗಿ ಆಹಾರ ಬದಲಿಸುವ ಮೊದಲು ವೈದ್ಯರನ್ನು ಸಂಪರ್ಕಿಸಿ.
 siridhanya:
   eyebrow:
     en: The five siridhanya
     kn: ಪಂಚ ಸಿರಿಧಾನ್ಯ
   heading:
-    en: "Five *positive* millets."
-    kn: "ಐದು *ಧನಾತ್ಮಕ* ಸಿರಿಧಾನ್ಯಗಳು."
+    en: Five *positive* millets.
+    kn: ಐದು *ಧನಾತ್ಮಕ* ಸಿರಿಧಾನ್ಯಗಳು.
   stats:
     - value: 6×
       label:
         en: the fibre of white rice
         kn: ಬಿಳಿ ಅಕ್ಕಿಗಿಂತ ಹೆಚ್ಚು ನಾರು
-    - value: "54"
+    - value: '54'
       label:
         en: GI (foxtail) — low, vs ~72 rice
         kn: ಗ್ಲೈಸೆಮಿಕ್ ಸೂಚ್ಯಂಕ (ನವಣೆ) — ಕಡಿಮೆ; ಅಕ್ಕಿಯದು ~72
@@ -169,8 +213,12 @@ environment:
     en: Ancient grains for a warming world.
     kn: ಬಿಸಿಯಾಗುತ್ತಿರುವ ಜಗತ್ತಿಗೆ ಪುರಾತನ ಧಾನ್ಯಗಳು.
   body:
-    en: Millets are C4 grasses — more grain from less water, grown on the rain alone, ripe in weeks.
-    kn: ಸಿರಿಧಾನ್ಯಗಳು C4 ಹುಲ್ಲು ಸಸ್ಯಗಳು — ಕಡಿಮೆ ನೀರಿನಲ್ಲಿ ಹೆಚ್ಚು ಇಳುವರಿ, ಮಳೆಯಿಂದಲೇ ಬೆಳೆಯುತ್ತವೆ, ಕೆಲವೇ ವಾರಗಳಲ್ಲಿ ಕೊಯ್ಲಿಗೆ ಬರುತ್ತವೆ.
+    en: >-
+      Millets are C4 grasses — more grain from less water, grown on the rain
+      alone, ripe in weeks.
+    kn: >-
+      ಸಿರಿಧಾನ್ಯಗಳು C4 ಹುಲ್ಲು ಸಸ್ಯಗಳು — ಕಡಿಮೆ ನೀರಿನಲ್ಲಿ ಹೆಚ್ಚು ಇಳುವರಿ, ಮಳೆಯಿಂದಲೇ
+      ಬೆಳೆಯುತ್ತವೆ, ಕೆಲವೇ ವಾರಗಳಲ್ಲಿ ಕೊಯ್ಲಿಗೆ ಬರುತ್ತವೆ.
   stats:
     - value: 5×
       label:
@@ -192,10 +240,20 @@ story:
     en: Grains brought home.
     kn: ಮನೆಗೆ ಮರಳಿದ ಧಾನ್ಯ.
   body:
-    en: "Dr. Khadar Vali — the “Millet Man of India,” a Mysuru food scientist and Padma Shri awardee — revived five near-extinct millets he calls siridhanya. His message is simple: return to traditional grains, grown without chemicals, as part of a balanced life."
-    kn: "“ಮಿಲೆಟ್ ಮ್ಯಾನ್ ಆಫ್ ಇಂಡಿಯಾ” ಎಂದೇ ಹೆಸರಾದ ಮೈಸೂರಿನ ಆಹಾರ ವಿಜ್ಞಾನಿ, ಪದ್ಮಶ್ರೀ ಪುರಸ್ಕೃತ ಡಾ. ಖಾದರ್ ವಲಿ ಅವರು ಅಳಿವಿನಂಚಿನಲ್ಲಿದ್ದ ಐದು ಸಿರಿಧಾನ್ಯಗಳಿಗೆ ಮರುಜೀವ ನೀಡಿದರು. ಅವರ ಸಂದೇಶ ಸರಳ: ರಾಸಾಯನಿಕವಿಲ್ಲದೆ ಬೆಳೆದ ಸಾಂಪ್ರದಾಯಿಕ ಧಾನ್ಯಗಳಿಗೆ ಮರಳಿ, ಸಮತೋಲಿತ ಜೀವನದ ಭಾಗವಾಗಿ."
-  image: /media/millet-grains-raw.jpg
-  imageAlt: A ripe millet head on the plant, in a green field
+    en: >-
+      Dr. Khadar Vali — the “Millet Man of India,” a Mysuru food scientist and
+      Padma Shri awardee — revived five near-extinct millets he calls
+      siridhanya. His message is simple: return to traditional grains, grown
+      without chemicals, as part of a balanced life.
+    kn: >-
+      “ಮಿಲೆಟ್ ಮ್ಯಾನ್ ಆಫ್ ಇಂಡಿಯಾ” ಎಂದೇ ಹೆಸರಾದ ಮೈಸೂರಿನ ಆಹಾರ ವಿಜ್ಞಾನಿ, ಪದ್ಮಶ್ರೀ
+      ಪುರಸ್ಕೃತ ಡಾ. ಖಾದರ್ ವಲಿ ಅವರು ಅಳಿವಿನಂಚಿನಲ್ಲಿದ್ದ ಐದು ಸಿರಿಧಾನ್ಯಗಳಿಗೆ ಮರುಜೀವ
+      ನೀಡಿದರು. ಅವರ ಸಂದೇಶ ಸರಳ: ರಾಸಾಯನಿಕವಿಲ್ಲದೆ ಬೆಳೆದ ಸಾಂಪ್ರದಾಯಿಕ ಧಾನ್ಯಗಳಿಗೆ ಮರಳಿ,
+      ಸಮತೋಲಿತ ಜೀವನದ ಭಾಗವಾಗಿ.
+  image: /media/home/story/image.jpg
+  imageAlt:
+    en: A ripe millet head on the plant, in a green field
+    kn: ಹಸಿರು ಹೊಲದಲ್ಲಿ ಗಿಡದ ಮೇಲೆ ಮಾಗಿದ ಕಿರುಧಾನ್ಯದ ತೆನೆ
 menuPreview:
   eyebrow:
     en: From our kitchen
@@ -203,28 +261,83 @@ menuPreview:
   heading:
     en: Everyday millet cooking.
     kn: ದೈನಂದಿನ ಸಿರಿಧಾನ್ಯ ಅಡುಗೆ.
-  tiles:
-    - image: /media/millet-dosa.jpg
-      imageAlt: A crisp dosa with chutneys and sambar on a cane stool
-      caption:
-        en: Dosa & tiffins
-        kn: ದೋಸೆ ಮತ್ತು ತಿಂಡಿ
-      category: tiffins
-    - image: /media/south-indian-thali.jpg
-      imageAlt: A steel thali with curries, rotis and papad, seen from above
-      caption:
-        en: Meals & bowls
-        kn: ಊಟ ಮತ್ತು ಬೌಲ್
-      category: meals
-    - image: /media/thali-wooden-table.jpg
-      imageAlt: A steel thali with papad and curries on a wooden table
-      caption:
-        en: Sweets & drinks
-        kn: ಸಿಹಿ ಮತ್ತು ಪಾನೀಯ
-      category: sweets-drinks
+  more:
+    en: See all {count}
+    kn: ಎಲ್ಲಾ {count} ನೋಡಿ
   cta:
     en: See the full menu
     kn: ಪೂರ್ಣ ಮೆನು ನೋಡಿ
+faq:
+  eyebrow:
+    en: Good to know
+    kn: ತಿಳಿದಿರಲಿ
+  heading:
+    en: Questions, *answered.*
+    kn: ಪ್ರಶ್ನೆಗಳಿಗೆ *ಉತ್ತರ.*
+  items:
+    - question:
+        en: Is everything gluten-free?
+        kn: ಎಲ್ಲವೂ ಗ್ಲುಟನ್-ಮುಕ್ತವೇ?
+      answer:
+        en: >-
+          Our kitchen cooks without wheat. Every dish is built on the five
+          siridhanya millets, which are naturally gluten-free. If you have
+          coeliac disease or a severe allergy, tell us when you order.
+        kn: >-
+          ನಮ್ಮ ಅಡುಗೆಮನೆಯಲ್ಲಿ ಗೋಧಿ ಬಳಸುವುದಿಲ್ಲ. ಪ್ರತಿಯೊಂದು ಖಾದ್ಯವೂ ಸ್ವಾಭಾವಿಕವಾಗಿ
+          ಗ್ಲುಟನ್-ಮುಕ್ತವಾದ ಪಂಚ ಸಿರಿಧಾನ್ಯಗಳಿಂದಲೇ ತಯಾರಾಗುತ್ತದೆ. ನಿಮಗೆ ಸೀಲಿಯಾಕ್
+          ಕಾಯಿಲೆ ಅಥವಾ ತೀವ್ರ ಅಲರ್ಜಿ ಇದ್ದರೆ, ಆರ್ಡರ್ ಮಾಡುವಾಗ ತಿಳಿಸಿ.
+    - question:
+        en: Is the food vegetarian?
+        kn: ಆಹಾರ ಸಸ್ಯಾಹಾರವೇ?
+      answer:
+        en: >-
+          Yes, the kitchen is fully vegetarian. Some dishes use curd, ghee or
+          milk; the ones marked vegan use none.
+        kn: >-
+          ಹೌದು, ನಮ್ಮ ಅಡುಗೆಮನೆ ಸಂಪೂರ್ಣ ಸಸ್ಯಾಹಾರಿ. ಕೆಲವು ಖಾದ್ಯಗಳಲ್ಲಿ ಮೊಸರು, ತುಪ್ಪ
+          ಅಥವಾ ಹಾಲು ಇರುತ್ತದೆ; ‘ವೀಗನ್’ ಎಂದು ಗುರುತಿಸಿದವುಗಳಲ್ಲಿ ಇವು ಯಾವುದೂ ಇಲ್ಲ.
+    - question:
+        en: Do you use sugar?
+        kn: ಸಕ್ಕರೆ ಬಳಸುತ್ತೀರಾ?
+      answer:
+        en: >-
+          No refined sugar. Sweets and drinks are sweetened with palm jaggery,
+          and coffee only if you ask.
+        kn: >-
+          ಸಂಸ್ಕರಿಸಿದ ಸಕ್ಕರೆ ಇಲ್ಲ. ಸಿಹಿ ಮತ್ತು ಪಾನೀಯಗಳಿಗೆ ತಾಳೆ ಬೆಲ್ಲ; ಕಾಫಿಗೆ ನೀವು
+          ಕೇಳಿದರೆ ಮಾತ್ರ.
+    - question:
+        en: Are millets good if I have diabetes?
+        kn: ಮಧುಮೇಹ ಇರುವವರಿಗೆ ಸಿರಿಧಾನ್ಯ ಒಳ್ಳೆಯದೇ?
+      answer:
+        en: >-
+          Foxtail and barnyard are low-GI, and kodo and little still sit below
+          polished rice, so they raise blood sugar more gently. They support a
+          balanced diet but are not a treatment: keep to your doctor's advice.
+        kn: >-
+          ನವಣೆ ಮತ್ತು ಊದಲು ಕಡಿಮೆ-ಜಿಐ ಧಾನ್ಯಗಳು; ಹಾರಕ ಮತ್ತು ಸಾಮೆಯ ಜಿಐ ಕೂಡ ಪಾಲಿಶ್
+          ಅಕ್ಕಿಗಿಂತ ಕಡಿಮೆ. ಹಾಗಾಗಿ ಇವು ರಕ್ತದ ಸಕ್ಕರೆಯನ್ನು ನಿಧಾನವಾಗಿ ಏರಿಸುತ್ತವೆ.
+          ಇವು ಸಮತೋಲಿತ ಆಹಾರಕ್ಕೆ ಪೂರಕ, ಚಿಕಿತ್ಸೆಯಲ್ಲ: ನಿಮ್ಮ ವೈದ್ಯರ ಸಲಹೆಯನ್ನೇ
+          ಪಾಲಿಸಿ.
+    - question:
+        en: Why only five millets? What about ragi?
+        kn: ಐದೇ ಸಿರಿಧಾನ್ಯ ಏಕೆ? ರಾಗಿ ಏಕಿಲ್ಲ?
+      answer:
+        en: >-
+          Ragi, jowar and bajra are good grains too. We keep to the five
+          siridhanya, the ‘positive’ millets Dr. Khadar Vali champions for their
+          higher fibre.
+        kn: >-
+          ರಾಗಿ, ಜೋಳ ಮತ್ತು ಸಜ್ಜೆ ಕೂಡ ಒಳ್ಳೆಯ ಧಾನ್ಯಗಳೇ. ಡಾ. ಖಾದರ್ ವಲಿ ಅವರು ಹೆಚ್ಚು
+          ನಾರಿನ ಕಾರಣಕ್ಕೆ ಪ್ರತಿಪಾದಿಸುವ ‘ಧನಾತ್ಮಕ’ ಪಂಚ ಸಿರಿಧಾನ್ಯಗಳನ್ನು ಮಾತ್ರ ನಾವು
+          ಬಳಸುತ್ತೇವೆ.
+    - question:
+        en: Can I book a table?
+        kn: ಟೇಬಲ್ ಕಾಯ್ದಿರಿಸಬಹುದೇ?
+      answer:
+        en: Yes. Call us to book, or just walk in.
+        kn: ಹೌದು. ಕರೆ ಮಾಡಿ ಕಾಯ್ದಿರಿಸಿ, ಅಥವಾ ನೇರವಾಗಿ ಬನ್ನಿ.
 visit:
   eyebrow:
     en: Visit us

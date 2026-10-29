@@ -1,8 +1,9 @@
 import type { CSSProperties } from "react";
-import type { Home } from "@/lib/content";
+import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { T } from "@/components/ui/T";
-import { Reveal } from "@/components/ui/Reveal";
+import type { Home } from "@/lib/content";
+import type { Localized } from "@/lib/i18n";
 
 const amount = (value: string) => {
   const match = value.replace(/,/g, "").match(/\d+(?:\.\d+)?/);
@@ -10,13 +11,13 @@ const amount = (value: string) => {
 };
 
 /** One table: a classic grid from 768px, a stack of per-nutrient bar cards below it. */
-export function Nutrition({ nutrition }: { nutrition: Home["nutrition"] }) {
+export function Nutrition({ nutrition }: { nutrition: Localized<Home["nutrition"]> }) {
   const { columns } = nutrition;
   const heads = [columns.millet, columns.rice, columns.wheat];
   return (
-    <Reveal className="section" id="nutrition">
+    <Reveal className="section" id="nutrition" labelledBy="nutrition-title">
       <div className="wrap">
-        <SectionHead eyebrow={nutrition.eyebrow} heading={nutrition.heading} />
+        <SectionHead eyebrow={nutrition.eyebrow} heading={nutrition.heading} id="nutrition-title" />
         <p className="table-unit">
           <T v={columns.nutrient} />
         </p>

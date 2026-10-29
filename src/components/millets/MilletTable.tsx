@@ -1,12 +1,12 @@
 import type { ReactNode } from "react";
-import type { Millet } from "@/lib/content";
-import type { Bi } from "@/lib/i18n";
 import { T } from "@/components/ui/T";
+import type { Millet } from "@/lib/content";
+import { pick, type Lang, type Text } from "@/lib/i18n";
 
-type Columns = { millet: Bi; protein: Bi; fibre: Bi; iron: Bi; gi: Bi };
+type Columns = { millet: Text; protein: Text; fibre: Text; iron: Text; gi: Text };
 
-/** A table from 768px; below that each millet is a card with a 2×2 grid of figures. */
-export function MilletTable({ millets, columns }: { millets: Millet[]; columns: Columns }) {
+/** A table from 768px; below that each millet is a card with a 2×2 grid of figures. Both names are given in both languages. */
+export function MilletTable({ millets, columns, lang }: { millets: Millet[]; columns: Columns; lang: Lang }) {
   const cols = [columns.protein, columns.fibre, columns.iron, columns.gi];
   return (
     <>
@@ -34,13 +34,17 @@ export function MilletTable({ millets, columns }: { millets: Millet[]; columns: 
                 { value: protein },
                 { value: fibre },
                 { value: iron },
-                { value: <T v={gi} />, className: `gi gi--${giBand}` },
+                { value: <T v={pick(gi, lang)} />, className: `gi gi--${giBand}` },
               ];
+              const english = <span lang={lang === "kn" ? "en" : undefined}>{m.name}</span>;
+              const kannada = m.localName.kn ? <span className="kn" lang={lang === "en" ? "kn" : undefined}>{m.localName.kn}</span> : null;
+              const [first, second] = lang === "kn" && kannada ? [kannada, english] : [english, kannada];
               return (
                 <tr key={m.slug}>
                   <th scope="row">
-                    <span className="mname">
-                      {m.name} · <span lang="kn">{m.localName.kn}</span>
+                    <span>
+                      {first}
+                      {second && <> · {second}</>}
                     </span>
                     <i className="mlat">{m.latin}</i>
                   </th>

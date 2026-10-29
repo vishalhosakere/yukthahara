@@ -1,14 +1,29 @@
-import type { Home, Settings, Ui } from "@/lib/content";
-import type { Bi } from "@/lib/i18n";
-import { addressLine, mapsHref, telHref } from "@/lib/site";
-import { T } from "@/components/ui/T";
+import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
+import { T } from "@/components/ui/T";
+import type { Home } from "@/lib/content";
+import type { Localized, Text } from "@/lib/i18n";
 
-export function Visit({ visit, settings, ui, hours }: { visit: Home["visit"]; settings: Settings; ui: Ui; hours: Bi[] }) {
-  const address = addressLine(settings.address);
-  const maps = mapsHref(settings);
+type Props = {
+  visit: Localized<Home["visit"]>;
+  name: Text;
+  address: Text;
+  hours: Text[];
+  phoneHref: string | null;
+  mapsHref: string;
+  labels: { address: Text; hours: Text; call: Text; directions: Text; newTab: Text };
+  status: ReactNode;
+};
+
+export function Visit({ visit, name, address, hours, phoneHref, mapsHref, labels, status }: Props) {
+  const newTab = (
+    <span className="sr-only">
+      {" "}
+      (<T v={labels.newTab} />)
+    </span>
+  );
   return (
-    <Reveal className="section band" id="visit">
+    <Reveal className="section band" id="visit" labelledBy="visit-title">
       <div className="wrap visit">
         <div>
           <header className="section-head">
@@ -16,14 +31,15 @@ export function Visit({ visit, settings, ui, hours }: { visit: Home["visit"]; se
             <p className="eyebrow">
               <T v={visit.eyebrow} />
             </p>
-            <h2>
-              <T v={settings.name} />
+            <h2 id="visit-title">
+              <T v={name} />
             </h2>
           </header>
+          {status}
           <dl className="vlines">
             <div className="vline">
               <dt>
-                <T v={ui.labels.address} />
+                <T v={labels.address} />
               </dt>
               <dd>
                 <T v={address} />
@@ -31,7 +47,7 @@ export function Visit({ visit, settings, ui, hours }: { visit: Home["visit"]; se
             </div>
             <div className="vline">
               <dt>
-                <T v={ui.labels.hours} />
+                <T v={labels.hours} />
               </dt>
               {hours.map((line, i) => (
                 <dd key={i}>
@@ -41,23 +57,25 @@ export function Visit({ visit, settings, ui, hours }: { visit: Home["visit"]; se
             </div>
           </dl>
           <div className="cta">
-            {settings.phone && (
-              <a className="btn btn--primary" href={telHref(settings.phone)}>
-                <T v={ui.labels.call} />
+            {phoneHref && (
+              <a className="btn btn--primary" href={phoneHref}>
+                <T v={labels.call} />
               </a>
             )}
-            <a className="btn" href={maps} target="_blank" rel="noopener noreferrer">
-              <T v={ui.labels.directions} />
+            <a className={`btn${phoneHref ? "" : " btn--primary"}`} href={mapsHref} target="_blank" rel="noopener noreferrer">
+              <T v={labels.directions} />
+              {newTab}
             </a>
           </div>
         </div>
-        <a className="mapbox" href={maps} target="_blank" rel="noopener noreferrer">
+        <a className="mapbox" href={mapsHref} target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
             <path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z" />
             <circle cx="12" cy="10" r="2.6" />
           </svg>
           <span className="mapbox-label">
-            <T v={visit.mapLabel} /> ↗
+            <T v={visit.mapLabel} /> <span aria-hidden="true">↗</span>
+            {newTab}
           </span>
           <span className="mapbox-addr">
             <T v={address} />

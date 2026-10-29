@@ -1,12 +1,18 @@
 import Link from "next/link";
-import type { Bi } from "@/lib/i18n";
+import type { Text } from "@/lib/i18n";
 import { T } from "@/components/ui/T";
 
-export function Brand({ name, size = "sm", onClick }: { name: Bi; size?: "sm" | "lg"; onClick?: () => void }) {
+type Props = { name: Text; href: string; homeLabel: Text; size?: "sm" | "lg"; onClick?: () => void };
+
+/** The wordmark, read as "yuktaahara, home page": the visible name leads the link's accessible name. */
+export function Brand({ name, href, homeLabel, size = "sm", onClick }: Props) {
   return (
-    <Link className={`brand brand--${size}`} href="/" onClick={onClick} aria-label={`${name.en} home`}>
+    <Link className={`brand brand--${size}`} href={href} onClick={onClick}>
       <span className="word">
         <T v={name} />
+      </span>
+      <span className="sr-only">
+        , <T v={homeLabel} />
       </span>
       <svg className="twirl" viewBox="263 365 147 37" fill="currentColor" aria-hidden="true">
         <g transform="translate(0,518) scale(0.1,-0.1)">

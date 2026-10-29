@@ -1,29 +1,14 @@
-"use client";
+import type { ReactNode } from "react";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+type Props = { id?: string; className: string; labelledBy?: string; children: ReactNode };
 
-/** A section that fades up once it scrolls into view. Without JS (no html.js) it is simply visible. */
-export function Reveal({ id, className, children }: { id?: string; className: string; children: ReactNode }) {
-  const ref = useRef<HTMLElement>(null);
-  const [shown, setShown] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-        setShown(true);
-        io.disconnect();
-      },
-      { threshold: 0.08, rootMargin: "0px 0px -6% 0px" },
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-
+/**
+ * A section that rises into place as it scrolls into view. Pure CSS (a scroll-driven animation), so it never waits on
+ * JavaScript: browsers without scroll timelines, print and reduced motion simply show it.
+ */
+export function Reveal({ id, className, labelledBy, children }: Props) {
   return (
-    <section ref={ref} id={id} className={`${className} reveal${shown ? " in" : ""}`}>
+    <section id={id} className={`${className} reveal`} aria-labelledby={labelledBy}>
       {children}
     </section>
   );

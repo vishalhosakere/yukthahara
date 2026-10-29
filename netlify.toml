@@ -1,5 +1,6 @@
-# Next.js 16 build, served by Netlify's Next.js runtime. The runtime is pinned here rather than left to detection: this
-# site was created before it became a Next.js app, so its UI settings have no runtime and would serve .next as plain files.
+# Next.js 16 on Netlify's Next.js runtime, declared here and version-pinned in package.json rather than left to
+# detection: this site was created before it became a Next.js app, so its UI settings have no runtime, and without the
+# plugin Netlify would serve .next as plain files. Response headers live in next.config.ts.
 [build]
   command = "npm run build"
   publish = ".next"
@@ -9,15 +10,3 @@
 
 [build.environment]
   NODE_VERSION = "24"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-
-# Internal design tools: reachable by URL, never indexed.
-[[headers]]
-  for = "/lab/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"

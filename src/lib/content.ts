@@ -1,4 +1,6 @@
 import "server-only";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { createReader } from "@keystatic/core/reader";
 import { cacheLife } from "next/cache";
 import keystaticConfig from "../../keystatic.config";
@@ -6,6 +8,18 @@ import keystaticConfig from "../../keystatic.config";
 const reader = createReader(process.cwd(), keystaticConfig);
 
 const byOrder = <T extends { order: number | null }>(a: T, b: T) => (a.order ?? 0) - (b.order ?? 0);
+
+/**
+ * CMS edits commit straight to the live site, so a broken one fails the build instead: Netlify then keeps serving the
+ * last good deploy, and the build log names the field to fix.
+ */
+function check(ok: boolean, problem: string): asserts ok {
+  if (!ok) throw new Error(`Content problem: ${problem}`);
+}
+
+function checkMedia(path: string | null, where: string) {
+  if (path) check(existsSync(join(process.cwd(), "public", path)), `${where} points to ${path}, which isn't in public/`);
+}
 
 export async function getSettings() {
   "use cache";
@@ -22,7 +36,11 @@ export async function getUi() {
 export async function getHome() {
   "use cache";
   cacheLife("max");
-  return reader.singletons.home.readOrThrow();
+  const home = await reader.singletons.home.readOrThrow();
+  checkMedia(home.hero.image, "Home › Hero photo");
+  checkMedia(home.hero.video, "Home › Background video");
+  checkMedia(home.story.image, "Home › Story photo");
+  return home;
 }
 
 export async function getMenuPage() {
@@ -34,7 +52,9 @@ export async function getMenuPage() {
 export async function getMilletsPage() {
   "use cache";
   cacheLife("max");
-  return reader.singletons.milletsPage.readOrThrow();
+  const page = await reader.singletons.milletsPage.readOrThrow();
+  checkMedia(page.honesty.image, "Millets page › Photo");
+  return page;
 }
 
 export async function getMillets() {
@@ -44,24 +64,28 @@ export async function getMillets() {
   return all.map(({ slug, entry }) => ({ slug, ...entry })).sort(byOrder);
 }
 
-/** Menu sections in order, with each dish's tag slugs resolved to their bilingual labels. Unknown tags are dropped. */
+/** Menu sections in order, each dish's tags resolved to their labels and diets. */
 export async function getMenu() {
   "use cache";
   cacheLife("max");
   const [categories, tags] = await Promise.all([reader.collections.menuCategories.all(), reader.collections.tags.all()]);
-  const tagLabels = new Map(tags.map(({ slug, entry }) => [slug, entry.label]));
+  const tagsBySlug = new Map(tags.map(({ slug, entry }) => [slug, { slug, label: entry.label, diet: entry.diet }]));
   return categories
-    .map(({ slug, entry }) => ({
-      slug,
-      ...entry,
-      items: entry.items.map((item) => ({
-        ...item,
-        tags: item.tags.flatMap((tag) => {
-          const label = tagLabels.get(tag);
-          return label ? [{ slug: tag, label }] : [];
-        }),
-      })),
-    }))
+    .map(({ slug, entry }) => {
+      checkMedia(entry.photo, `Menu › ${entry.key} › Photo`);
+      return {
+        slug,
+        ...entry,
+        items: entry.items.map((item) => ({
+          ...item,
+          tags: item.tags.map((tag) => {
+            const found = tagsBySlug.get(tag);
+            check(Boolean(found), `the dish "${item.name.en}" has the tag "${tag}", which no longer exists`);
+            return found!;
+          }),
+        })),
+      };
+    })
     .sort(byOrder);
 }
 
