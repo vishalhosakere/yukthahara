@@ -1,7 +1,11 @@
-# Next.js 16 build. Netlify detects Next.js and runs it with its Next.js runtime (no plugin to install).
+# Next.js 16 build, served by Netlify's Next.js runtime. The runtime is pinned here rather than left to detection: this
+# site was created before it became a Next.js app, so its UI settings have no runtime and would serve .next as plain files.
 [build]
   command = "npm run build"
   publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [build.environment]
   NODE_VERSION = "24"
